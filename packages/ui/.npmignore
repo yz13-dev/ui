@@ -1,0 +1,41 @@
+# Source files
+src/
+*.ts
+*.tsx
+!*.d.ts
+
+# Development files
+.eslintrc*
+eslint.config.*
+tsconfig.json
+turbo.json
+tsup.config.ts
+
+# Build artifacts (except dist)
+build/
+coverage/
+
+# Development dependencies
+node_modules/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Test files
+__tests__/
+*.test.*
+*.spec.* 
