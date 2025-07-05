@@ -2,9 +2,10 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig([
   {
-    entry: ["./src/styles/styles.css"],
+    entry: ["./src/styles/*"],
     splitting: false,
-    sourcemap: true,
+    sourcemap: false,
+    clean: true,
     minify: true,
     dts: false,
     skipNodeModulesBundle: true,
@@ -12,16 +13,39 @@ export default defineConfig([
     outDir: "dist/styles",
   },
   {
-  entry: ['src/ui/*'],
-  format: ['cjs', 'esm'],
-  dts: true,
-  splitting: false,
-  sourcemap: true,
-  clean: true,
-  external: ['react', 'react-dom'],
-  treeshake: true,
-  minify: false, // Keep readable for debugging
-  outDir: 'dist/ui',
-  onSuccess: 'echo "✅ Build completed successfully!"',
-}
-]); 
+    entry: ['src/components/ui/*'],
+    format: ['cjs', 'esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    external: ['react', 'react-dom'],
+    treeshake: true,
+    minify: true,
+    outDir: 'dist/components/ui',
+  },
+  {
+    entry: ['src/lib/*'],
+    format: ['cjs', 'esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    external: ['react', 'react-dom'],
+    treeshake: true,
+    minify: true,
+    outDir: 'dist/lib',
+  },
+  {
+    entry: ['src/hooks/*'],
+    format: ['cjs', 'esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    external: ['react', 'react-dom'],
+    treeshake: true,
+    minify: true,
+    outDir: 'dist/hooks',
+  }
+]);
