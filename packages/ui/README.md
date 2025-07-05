@@ -17,34 +17,16 @@ import { Card, Gradient, TurborepoLogo } from '@yz13/ui';
 import '@yz13/ui/styles.css';
 ```
 
-### Card Component
+### Import styles
 
-A clickable card component with hover effects.
+```css
+@import "tailwindcss";
 
-```tsx
-<Card title="Example Card" href="https://example.com">
-  This is a description of the card content.
-</Card>
-```
+@import "@yz13/ui/globals.css";
 
-### Gradient Component
+/* path to @yz13/ui in node_modules */
+@source "../../../node_modules/@yz13/ui";
 
-A gradient background component with configurable options.
-
-```tsx
-<Gradient 
-  conic={true} 
-  small={false} 
-  className="absolute inset-0"
-/>
-```
-
-### TurborepoLogo Component
-
-The official Turborepo logo as an SVG component.
-
-```tsx
-<TurborepoLogo />
 ```
 
 ## Requirements
@@ -74,4 +56,4 @@ npm run lint
 
 ## License
 
-MIT 
+MIT

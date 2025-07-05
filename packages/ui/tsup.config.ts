@@ -6,7 +6,7 @@ export default defineConfig([
     splitting: false,
     sourcemap: false,
     clean: true,
-    minify: true,
+    minify: false,
     dts: false,
     skipNodeModulesBundle: true,
     external: ["node_modules"],

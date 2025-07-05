@@ -13,6 +13,16 @@
     "./theme.css": "./dist/styles/theme.css",
     "./globals.css": "./dist/styles/globals.css",
     "./vars.css": "./dist/styles/vars.css",
+    "./utils": {
+      "import": "./dist/lib/utils.mjs",
+      "require": "./dist/lib/utils.js",
+      "types": "./dist/lib/utils.d.ts"
+    },
+    "./hooks/use-mobile": {
+      "import": "./dist/hooks/use-mobile.mjs",
+      "require": "./dist/hooks/use-mobile.js",
+      "types": "./dist/hooks/use-mobile.d.ts"
+    },
     "./accordion": {
       "import": "./dist/components/ui/accordion.mjs",
       "require": "./dist/components/ui/accordion.js",
@@ -270,8 +280,8 @@
     "react": "^19.1.0"
   },
   "devDependencies": {
+    "tw-animate-css": "^1.3.5",
     "@repo/eslint-config": "*",
-    "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
     "@tailwindcss/cli": "^4.1.11",
     "@types/react": "^19.1.8",
