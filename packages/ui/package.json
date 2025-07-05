@@ -1,6 +1,6 @@
 {
   "name": "@yz13/ui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A modern React UI component library with Tailwind CSS",
   "sideEffects": [
     "**/*.css"
@@ -238,7 +238,6 @@
       "require": "./dist/components/ui/tooltip.js",
       "types": "./dist/components/ui/tooltip.d.ts"
     }
-
   },
   "keywords": [
     "react",
