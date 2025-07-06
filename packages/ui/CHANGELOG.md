@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.1.3
+
+### Patch Changes
+
+- Add use client derective to components
+
 ## 0.1.2
 
 ### Patch Changes
