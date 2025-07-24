@@ -1,5 +1,17 @@
 # @yz13/ui
 
+## 0.1.6
+
+### Patch Changes
+
+- Move tw-animate-css from devDeps
+
+## 0.1.5
+
+### Patch Changes
+
+- add button props type to button
+
 ## 0.1.4
 
 ### Patch Changes
