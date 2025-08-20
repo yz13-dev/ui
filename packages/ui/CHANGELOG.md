@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.1.7
+
+### Patch Changes
+
+- Remove shadow from ui components
+
 ## 0.1.6
 
 ### Patch Changes
