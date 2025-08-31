@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.2.1
+
+### Patch Changes
+
+- Update radius in css
+
 ## 0.2.0
 
 ### Minor Changes
