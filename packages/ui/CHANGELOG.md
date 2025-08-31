@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.2.2
+
+### Patch Changes
+
+- Fix vars.css
+
 ## 0.2.1
 
 ### Patch Changes
