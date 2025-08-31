@@ -1,6 +1,6 @@
 {
   "name": "@yz13/ui",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "A modern React UI component library with Tailwind CSS",
   "sideEffects": [
     "**/*.css"
@@ -22,6 +22,76 @@
       "import": "./dist/hooks/use-mobile.mjs",
       "require": "./dist/hooks/use-mobile.js",
       "types": "./dist/hooks/use-mobile.d.ts"
+    },
+    "./icons": {
+      "import": "./dist/components/icons/icons.mjs",
+      "require": "./dist/components/icons/icons.js",
+      "types": "./dist/components/icons/icons.d.ts"
+    },
+    "./animated/action-search-bar": {
+      "import": "./dist/components/animated/action-search-bar.mjs",
+      "require": "./dist/components/animated/action-search-bar.js",
+      "types": "./dist/components/animated/action-search-bar.d.ts"
+    },
+    "./animated/copy": {
+      "import": "./dist/components/animated/copy.mjs",
+      "require": "./dist/components/animated/copy.js",
+      "types": "./dist/components/animated/copy.d.ts"
+    },
+    "./animated/counting-number": {
+      "import": "./dist/components/animated/counting-number.mjs",
+      "require": "./dist/components/animated/counting-number.js",
+      "types": "./dist/components/animated/counting-number.d.ts"
+    },
+    "./animated/github-stars": {
+      "import": "./dist/components/animated/github-stars.mjs",
+      "require": "./dist/components/animated/github-stars.js",
+      "types": "./dist/components/animated/github-stars.d.ts"
+    },
+    "./animated/hold-button": {
+      "import": "./dist/components/animated/hold-button.mjs",
+      "require": "./dist/components/animated/hold-button.js",
+      "types": "./dist/components/animated/hold-button.d.ts"
+    },
+    "./animated/scroll-progress": {
+      "import": "./dist/components/animated/scroll-progress.mjs",
+      "require": "./dist/components/animated/scroll-progress.js",
+      "types": "./dist/components/animated/scroll-progress.d.ts"
+    },
+    "./animated/sliding-number": {
+      "import": "./dist/components/animated/sliding-number.mjs",
+      "require": "./dist/components/animated/sliding-number.js",
+      "types": "./dist/components/animated/sliding-number.d.ts"
+    },
+    "./animated/stagger-scrolling-wheel": {
+      "import": "./dist/components/animated/stagger-scrolling-wheel.mjs",
+      "require": "./dist/components/animated/stagger-scrolling-wheel.js",
+      "types": "./dist/components/animated/stagger-scrolling-wheel.d.ts"
+    },
+    "./animated/stars-scrolling-wheel": {
+      "import": "./dist/components/animated/stars-scrolling-wheel.mjs",
+      "require": "./dist/components/animated/stars-scrolling-wheel.js",
+      "types": "./dist/components/animated/stars-scrolling-wheel.d.ts"
+    },
+    "./animated/swipe-button": {
+      "import": "./dist/components/animated/swipe-button.mjs",
+      "require": "./dist/components/animated/swipe-button.js",
+      "types": "./dist/components/animated/swipe-button.d.ts"
+    },
+    "./animated/theme-switcher": {
+      "import": "./dist/components/animated/theme-switcher.mjs",
+      "require": "./dist/components/animated/theme-switcher.js",
+      "types": "./dist/components/animated/theme-switcher.d.ts"
+    },
+    "./animated/text-highlighter": {
+      "import": "./dist/components/animated/text-highlighter.mjs",
+      "require": "./dist/components/animated/text-highlighter.js",
+      "types": "./dist/components/animated/text-highlighter.d.ts"
+    },
+    "./animated/typing": {
+      "import": "./dist/components/animated/typing.mjs",
+      "require": "./dist/components/animated/typing.js",
+      "types": "./dist/components/animated/typing.d.ts"
     },
     "./accordion": {
       "import": "./dist/components/ui/accordion.mjs",
@@ -247,6 +317,26 @@
       "import": "./dist/components/ui/tooltip.mjs",
       "require": "./dist/components/ui/tooltip.js",
       "types": "./dist/components/ui/tooltip.d.ts"
+    },
+    "./kanban": {
+      "import": "./dist/components/ui/kanban.mjs",
+      "require": "./dist/components/ui/kanban.js",
+      "types": "./dist/components/ui/kanban.d.ts"
+    },
+    "./kbd": {
+      "import": "./dist/components/ui/kbd.mjs",
+      "require": "./dist/components/ui/kbd.js",
+      "types": "./dist/components/ui/kbd.d.ts"
+    },
+    "./meter": {
+      "import": "./dist/components/ui/meter.mjs",
+      "require": "./dist/components/ui/meter.js",
+      "types": "./dist/components/ui/meter.d.ts"
+    },
+    "./phone-input": {
+      "import": "./dist/components/ui/phone-input.mjs",
+      "require": "./dist/components/ui/phone-input.js",
+      "types": "./dist/components/ui/phone-input.d.ts"
     }
   },
   "keywords": [
@@ -290,7 +380,11 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
-    "tw-animate-css": "^1.3.5",
+    "@base-ui-components/react": "^1.0.0-beta.2",
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/modifiers": "^9.0.0",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -325,13 +419,17 @@
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^0.525.0",
+    "motion": "^12.23.12",
     "next-themes": "^0.4.6",
     "react-day-picker": "^9.8.0",
     "react-hook-form": "^7.60.0",
+    "react-phone-number-input": "^3.4.12",
     "react-resizable-panels": "^3.0.3",
+    "react-use-measure": "^2.1.7",
     "recharts": "^3.0.2",
     "sonner": "^2.0.6",
     "tailwind-merge": "^3.3.1",
+    "tw-animate-css": "^1.3.5",
     "vaul": "^1.1.2",
     "zod": "^3.25.74"
   }

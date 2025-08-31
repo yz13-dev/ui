@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.2.0
+
+### Minor Changes
+
+- Add animated components, update colors, new ui components
+
 ## 0.1.7
 
 ### Patch Changes

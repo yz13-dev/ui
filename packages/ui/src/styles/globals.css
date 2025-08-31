@@ -12,22 +12,22 @@
 ::before,
 ::backdrop,
 ::file-selector-button {
-    border-color: var(--color-border, currentColor);
+  border-color: var(--color-border, currentColor);
 }
 
 ::selection {
-    background-color: var(--color-foreground);
-    color: var(--color-background);
+  background-color: var(--color-foreground);
+  color: var(--color-background);
 }
 
 ::-webkit-scrollbar-track {
-    width: calc(var(--spacing) * 4);
-    background-color: var(--color-background);
+  width: calc(var(--spacing) * 4);
+  background-color: var(--color-background);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-secondary);
-    border-radius: var(--radius-full);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
 }
 
 /* ::-webkit-scrollbar-thumb:hover { */
@@ -35,81 +35,98 @@
 /* } */
 
 ::-webkit-scrollbar {
-    width: calc(var(--spacing) * 3);
-    background-color: var(--color-background);
+  width: calc(var(--spacing) * 3);
+  background-color: var(--color-background);
 }
 
 .pattern-lines {
-    background-attachment: fixed;
-    background-size: 10px 10px;
-    background-image: repeating-linear-gradient(315deg,
-            var(--pattern-fg) 0,
-            var(--pattern-fg) 1px,
-            transparent 0,
-            transparent 50%);
+  background-attachment: fixed;
+  background-size: 10px 10px;
+  background-image: repeating-linear-gradient(315deg,
+      var(--pattern-fg) 0,
+      var(--pattern-fg) 1px,
+      transparent 0,
+      transparent 50%);
 }
 
 .pattern-dots {
-    background-attachment: fixed;
-    background-size: 10px 10px;
-    background-image: radial-gradient(var(--pattern-fg) 1px, transparent 0);
+  background-attachment: fixed;
+  background-size: 10px 10px;
+  background-image: radial-gradient(var(--pattern-fg) 1px, transparent 0);
 }
 
 .light-mode-image {
-    display: block;
+  display: block;
 }
 
 .dark-mode-image {
-    display: none;
+  display: none;
 }
 
 .marquee-vertical {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    user-select: none;
-    mask-image: linear-gradient(var(--mask-direction, to bottom),
-            transparent,
-            var(--color-background) 20%,
-            var(--color-background) 80%,
-            transparent);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(var(--mask-direction, to bottom),
+      transparent,
+      var(--color-background) 20%,
+      var(--color-background) 80%,
+      transparent);
 }
 
 .marquee {
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-    mask-image: linear-gradient(var(--mask-direction, to right),
-            transparent,
-            var(--color-background) 20%,
-            var(--color-background) 80%,
-            transparent);
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(var(--mask-direction, to right),
+      transparent,
+      var(--color-background) 20%,
+      var(--color-background) 80%,
+      transparent);
 }
 
 button:not(:disabled),
 [role="button"]:not(:disabled) {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 body {
-    color-scheme: light;
-    font-family: var(--font-sans);
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+  color-scheme: light;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        color-scheme: dark;
-        background-color: var(--color-background);
-        color: var(--color-foreground);
-    }
+  body {
+    color-scheme: dark;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
 
-    .light-mode-image {
-        display: none;
-    }
+  .light-mode-image {
+    display: none;
+  }
 
-    .dark-mode-image {
-        display: block;
-    }
+  .dark-mode-image {
+    display: block;
+  }
+}
+
+
+.face {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.face-front {
+  transform: rotateX(0deg) translateZ(calc(var(--height) / 2));
+}
+
+.face-back {
+  transform: rotateX(-80deg) translateZ(calc(var(--height) / 2));
+  backface-visibility: hidden;
+  filter: blur(8px);
+  opacity: 0;
 }
