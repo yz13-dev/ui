@@ -1,5 +1,11 @@
 # @yz13/ui
 
+## 0.2.3
+
+### Patch Changes
+
+- New components from shadcn
+
 ## 0.2.2
 
 ### Patch Changes

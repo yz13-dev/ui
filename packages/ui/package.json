@@ -1,6 +1,6 @@
 {
   "name": "@yz13/ui",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A modern React UI component library with Tailwind CSS",
   "sideEffects": [
     "**/*.css"
@@ -133,6 +133,11 @@
       "require": "./dist/components/ui/button.js",
       "types": "./dist/components/ui/button.d.ts"
     },
+    "./button-group": {
+      "import": "./dist/components/ui/button-group.mjs",
+      "require": "./dist/components/ui/button-group.js",
+      "types": "./dist/components/ui/button-group.d.ts"
+    },
     "./calendar": {
       "import": "./dist/components/ui/calendar.mjs",
       "require": "./dist/components/ui/calendar.js",
@@ -183,6 +188,16 @@
       "require": "./dist/components/ui/dropdown-menu.js",
       "types": "./dist/components/ui/dropdown-menu.d.ts"
     },
+    "./empty": {
+      "import": "./dist/components/ui/empty.mjs",
+      "require": "./dist/components/ui/empty.js",
+      "types": "./dist/components/ui/empty.d.ts"
+    },
+    "./field": {
+      "import": "./dist/components/ui/field.mjs",
+      "require": "./dist/components/ui/field.js",
+      "types": "./dist/components/ui/field.d.ts"
+    },
     "./form": {
       "import": "./dist/components/ui/form.mjs",
       "require": "./dist/components/ui/form.js",
@@ -198,10 +213,20 @@
       "require": "./dist/components/ui/input.js",
       "types": "./dist/components/ui/input.d.ts"
     },
+    "./input-group": {
+      "import": "./dist/components/ui/input-group.mjs",
+      "require": "./dist/components/ui/input-group.js",
+      "types": "./dist/components/ui/input-group.d.ts"
+    },
     "./input-otp": {
       "import": "./dist/components/ui/input-otp.mjs",
       "require": "./dist/components/ui/input-otp.js",
       "types": "./dist/components/ui/input-otp.d.ts"
+    },
+    "./item": {
+      "import": "./dist/components/ui/item.mjs",
+      "require": "./dist/components/ui/item.js",
+      "types": "./dist/components/ui/item.d.ts"
     },
     "./label": {
       "import": "./dist/components/ui/label.mjs",
@@ -337,6 +362,11 @@
       "import": "./dist/components/ui/phone-input.mjs",
       "require": "./dist/components/ui/phone-input.js",
       "types": "./dist/components/ui/phone-input.d.ts"
+    },
+    "./spinner": {
+      "import": "./dist/components/ui/spinner.mjs",
+      "require": "./dist/components/ui/spinner.js",
+      "types": "./dist/components/ui/spinner.d.ts"
     }
   },
   "keywords": [
