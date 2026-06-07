@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { cn } from '@/lib/utils';
-import { StarIcon } from 'lucide-react';
+import { cn } from "@/lib/utils";
+import { StarIcon } from "lucide-react";
 import {
   AnimatePresence,
   motion,
@@ -11,16 +11,12 @@ import {
   useTransform,
   type SpringOptions,
   type UseInViewOptions,
-} from 'motion/react';
-import * as React from 'react';
+} from "motion/react";
+import * as React from "react";
 
-const formatter = new Intl.NumberFormat('en-US');
+const formatter = new Intl.NumberFormat("en-US");
 
-function generateRange(
-  max: number,
-  step: number,
-  sideItemsCount: number,
-): number[] {
+function generateRange(max: number, step: number, sideItemsCount: number): number[] {
   const result: number[] = [];
   const end = max + sideItemsCount * step;
   for (let value = end; value >= 0; value -= step) {
@@ -37,9 +33,9 @@ type StarsScrollingWheelProps = {
   transition?: SpringOptions;
   inView?: boolean;
   inViewOnce?: boolean;
-  inViewMargin?: UseInViewOptions['margin'];
+  inViewMargin?: UseInViewOptions["margin"];
   delay?: number;
-} & React.ComponentProps<'div'>;
+} & React.ComponentProps<"div">;
 
 function StarsScrollingWheel({
   ref,
@@ -50,7 +46,7 @@ function StarsScrollingWheel({
   transition = { stiffness: 90, damping: 30 },
   inView = false,
   inViewOnce = true,
-  inViewMargin = '0px',
+  inViewMargin = "0px",
   delay = 0,
   className,
   style,
@@ -85,21 +81,13 @@ function StarsScrollingWheel({
     return () => clearTimeout(timer);
   }, [isInView, finalY, yMotion, delay]);
 
-  const currentIndex = useTransform(
-    ySpring,
-    (y) => y / itemHeight + sideItemsCount,
-  );
+  const currentIndex = useTransform(ySpring, (y) => y / itemHeight + sideItemsCount);
   const currentValue = useTransform(currentIndex, (idx) => idx * step);
-  const completedTransform = useTransform(
-    currentValue,
-    (val) => val >= stars * 0.99,
-  );
+  const completedTransform = useTransform(currentValue, (val) => val >= stars * 0.99);
 
-  const [isCompleted, setCompleted] = React.useState<boolean>(
-    completedTransform.get(),
-  );
+  const [isCompleted, setCompleted] = React.useState<boolean>(completedTransform.get());
   React.useEffect(() => {
-    const unsubscribe = completedTransform.on('change', (latest) => {
+    const unsubscribe = completedTransform.on("change", (latest) => {
       if (latest) setCompleted(true);
     });
     return unsubscribe;
@@ -108,10 +96,7 @@ function StarsScrollingWheel({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        'relative overflow-hidden w-[200px] bg-background',
-        className,
-      )}
+      className={cn("relative overflow-hidden w-[200px] bg-background", className)}
       style={{ height: itemHeight * displayedItemsCount, ...style }}
       {...props}
     >
@@ -139,9 +124,7 @@ function StarsScrollingWheel({
           style={{ height: itemHeight }}
         >
           <div className="relative inline-flex size-[28px] shrink-0">
-            <StarIcon
-              className="text-yellow-500"
-            />
+            <StarIcon className="text-yellow-500" />
             <AnimatePresence>
               {isCompleted && (
                 <>
@@ -149,24 +132,24 @@ function StarsScrollingWheel({
                     className="absolute inset-0 rounded-full"
                     style={{
                       background:
-                        'radial-gradient(circle, rgba(255,215,0,0.4) 0%, rgba(255,215,0,0) 70%)',
+                        "radial-gradient(circle, rgba(255,215,0,0.4) 0%, rgba(255,215,0,0) 70%)",
                     }}
                     initial={{ scale: 1.2, opacity: 0 }}
                     animate={{ scale: [1.2, 1.8, 1.2], opacity: [0, 0.3, 0] }}
-                    transition={{ duration: 1.2, ease: 'easeInOut' }}
+                    transition={{ duration: 1.2, ease: "easeInOut" }}
                   />
                   <motion.div
                     className="absolute inset-0 rounded-full"
-                    style={{ boxShadow: '0 0 10px 2px rgba(255,215,0,0.6)' }}
+                    style={{ boxShadow: "0 0 10px 2px rgba(255,215,0,0.6)" }}
                     initial={{ scale: 1, opacity: 0 }}
                     animate={{ scale: [1, 1.5], opacity: [0.8, 0] }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                   />
                   {[...Array(6)].map((_, i) => (
                     <motion.div
                       key={i}
                       className="absolute w-1 h-1 rounded-full bg-yellow-500"
-                      initial={{ x: '50%', y: '50%', scale: 0, opacity: 0 }}
+                      initial={{ x: "50%", y: "50%", scale: 0, opacity: 0 }}
                       animate={{
                         x: `calc(50% + ${Math.cos((i * Math.PI) / 3) * 30}px)`,
                         y: `calc(50% + ${Math.sin((i * Math.PI) / 3) * 30}px)`,
@@ -176,7 +159,7 @@ function StarsScrollingWheel({
                       transition={{
                         duration: 0.8,
                         delay: i * 0.05,
-                        ease: 'easeOut',
+                        ease: "easeOut",
                       }}
                     />
                   ))}

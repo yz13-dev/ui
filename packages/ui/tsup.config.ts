@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from "tsup";
 
 export default defineConfig([
   {
@@ -13,8 +13,8 @@ export default defineConfig([
     outDir: "dist/styles",
   },
   {
-    entry: ['src/components/icons.tsx'],
-    format: ['cjs', 'esm'],
+    entry: ["src/components/icons.tsx"],
+    format: ["cjs", "esm"],
     dts: true,
     splitting: false,
     sourcemap: true,
@@ -22,11 +22,11 @@ export default defineConfig([
     external: ["node_modules"],
     treeshake: false,
     minify: false,
-    outDir: 'dist/components/icons',
+    outDir: "dist/components/icons",
   },
   {
-    entry: ['src/components/ui/*'],
-    format: ['cjs', 'esm'],
+    entry: ["src/components/ui/*"],
+    format: ["cjs", "esm"],
     dts: true,
     splitting: false,
     sourcemap: true,
@@ -34,11 +34,11 @@ export default defineConfig([
     external: ["node_modules"],
     treeshake: false,
     minify: false,
-    outDir: 'dist/components/ui',
+    outDir: "dist/components/ui",
   },
   {
-    entry: ['src/components/animated/*'],
-    format: ['cjs', 'esm'],
+    entry: ["src/components/animated/*"],
+    format: ["cjs", "esm"],
     dts: true,
     splitting: false,
     sourcemap: true,
@@ -46,11 +46,11 @@ export default defineConfig([
     external: ["node_modules"],
     treeshake: false,
     minify: false,
-    outDir: 'dist/components/animated',
+    outDir: "dist/components/animated",
   },
   {
-    entry: ['src/lib/*'],
-    format: ['cjs', 'esm'],
+    entry: ["src/lib/*"],
+    format: ["cjs", "esm"],
     dts: true,
     splitting: false,
     sourcemap: true,
@@ -58,11 +58,11 @@ export default defineConfig([
     external: ["node_modules"],
     treeshake: true,
     minify: true,
-    outDir: 'dist/lib',
+    outDir: "dist/lib",
   },
   {
-    entry: ['src/hooks/*'],
-    format: ['cjs', 'esm'],
+    entry: ["src/hooks/*"],
+    format: ["cjs", "esm"],
     dts: true,
     splitting: false,
     sourcemap: true,
@@ -70,6 +70,6 @@ export default defineConfig([
     external: ["node_modules"],
     treeshake: true,
     minify: true,
-    outDir: 'dist/hooks',
-  }
+    outDir: "dist/hooks",
+  },
 ]);

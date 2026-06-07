@@ -1,17 +1,12 @@
-'use client';
+"use client";
 
-import {
-  motion,
-  useScroll,
-  useSpring,
-  type HTMLMotionProps,
-} from 'motion/react';
-import * as React from 'react';
+import { motion, useScroll, useSpring, type HTMLMotionProps } from "motion/react";
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
-type ScrollProgressProps = React.ComponentProps<'div'> & {
-  progressProps?: HTMLMotionProps<'div'>;
+type ScrollProgressProps = React.ComponentProps<"div"> & {
+  progressProps?: HTMLMotionProps<"div">;
 };
 
 function ScrollProgress({
@@ -24,9 +19,7 @@ function ScrollProgress({
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   React.useImperativeHandle(ref, () => containerRef.current as HTMLDivElement);
 
-  const { scrollYProgress } = useScroll(
-    children ? { container: containerRef } : undefined,
-  );
+  const { scrollYProgress } = useScroll(children ? { container: containerRef } : undefined);
 
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 250,
@@ -41,7 +34,7 @@ function ScrollProgress({
         {...progressProps}
         style={{ scaleX }}
         className={cn(
-          'fixed z-50 top-0 inset-x-0 h-1 bg-blue-500 origin-left',
+          "fixed z-50 top-0 inset-x-0 h-1 bg-blue-500 origin-left",
           progressProps?.className,
         )}
       />
@@ -49,7 +42,7 @@ function ScrollProgress({
         <div
           ref={containerRef}
           data-slot="scroll-progress-container"
-          className={cn('overflow-y-auto h-full', className)}
+          className={cn("overflow-y-auto h-full", className)}
           {...props}
         >
           {children}

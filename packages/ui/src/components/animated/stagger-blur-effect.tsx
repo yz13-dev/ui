@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { stagger, useAnimate } from "motion/react"
-import { CSSProperties, ReactNode, useEffect, useState } from "react"
+import { stagger, useAnimate } from "motion/react";
+import { CSSProperties, ReactNode, useEffect, useState } from "react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface StaggerTextEffectProps {
-  className?: string
-  children: ReactNode
-  duration?: number
-  staggerDelay?: number
-  height?: number
+  className?: string;
+  children: ReactNode;
+  duration?: number;
+  staggerDelay?: number;
+  height?: number;
 }
 
 export function StaggerBlurEffect({
@@ -20,21 +20,17 @@ export function StaggerBlurEffect({
   staggerDelay = 0.05,
   height = 56,
 }: StaggerTextEffectProps) {
-  const [scope, animate] = useAnimate()
-  const [isRotatedUp, setIsRotatedUp] = useState<boolean>(false)
+  const [scope, animate] = useAnimate();
+  const [isRotatedUp, setIsRotatedUp] = useState<boolean>(false);
 
   const onMouseEnter = () => {
-    setIsRotatedUp((prev) => !prev)
-  }
+    setIsRotatedUp((prev) => !prev);
+  };
 
   useEffect(() => {
     if (isRotatedUp) {
       animate([
-        [
-          ".letter",
-          { rotateX: 80 },
-          { duration, delay: stagger(staggerDelay) },
-        ],
+        [".letter", { rotateX: 80 }, { duration, delay: stagger(staggerDelay) }],
         [
           ".face-front",
           { filter: "blur(6px)", opacity: 0 },
@@ -45,7 +41,7 @@ export function StaggerBlurEffect({
           { filter: "blur(0px)", opacity: 1 },
           { duration, delay: stagger(staggerDelay), at: "<" },
         ],
-      ])
+      ]);
     } else {
       animate([
         [".letter", { rotateX: 0 }, { duration, delay: stagger(staggerDelay) }],
@@ -59,11 +55,11 @@ export function StaggerBlurEffect({
           { filter: "blur(6px)", opacity: 0 },
           { duration, delay: stagger(staggerDelay), at: "<" },
         ],
-      ])
+      ]);
     }
-  }, [isRotatedUp, animate, duration, staggerDelay])
+  }, [isRotatedUp, animate, duration, staggerDelay]);
 
-  const lettersArray = children?.toString().split("") || []
+  const lettersArray = children?.toString().split("") || [];
 
   return (
     <div
@@ -75,16 +71,10 @@ export function StaggerBlurEffect({
         } as CSSProperties
       }
       onMouseEnter={onMouseEnter}
-      className={cn(
-        "inline-block cursor-pointer font-semibold tracking-tighter",
-        className
-      )}
+      className={cn("inline-block cursor-pointer font-semibold tracking-tighter", className)}
     >
       <span className="sr-only">{children}</span>
-      <span
-        aria-hidden
-        className="relative flex h-[--height] items-center justify-center text-5xl"
-      >
+      <span aria-hidden className="relative flex h-[--height] items-center justify-center text-5xl">
         {lettersArray.map((letter, index) => (
           <span
             style={{
@@ -108,12 +98,10 @@ export function StaggerBlurEffect({
             >
               {letter === " " ? "\u00A0" : letter}
             </span>
-            <span className="opacity-0">
-              {letter === " " ? "\u00A0" : letter}
-            </span>
+            <span className="opacity-0">{letter === " " ? "\u00A0" : letter}</span>
           </span>
         ))}
       </span>
     </div>
-  )
+  );
 }

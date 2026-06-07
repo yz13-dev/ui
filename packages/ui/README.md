@@ -13,8 +13,8 @@ npm install @yz13/ui
 ### Import components
 
 ```tsx
-import { Card, Gradient, TurborepoLogo } from '@yz13/ui';
-import '@yz13/ui/styles.css';
+import { Card, Gradient, TurborepoLogo } from "@yz13/ui";
+import "@yz13/ui/styles.css";
 ```
 
 ### Import styles
@@ -26,7 +26,6 @@ import '@yz13/ui/styles.css';
 
 /* path to @yz13/ui in node_modules */
 @source "../../../node_modules/@yz13/ui";
-
 ```
 
 ## Requirements

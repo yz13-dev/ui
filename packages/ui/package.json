@@ -393,18 +393,18 @@
     "build": "tsup",
     "check-types": "tsc --noEmit",
     "dev": "tsup --watch",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "oxlint",
     "prepublishOnly": "bun run build"
   },
   "peerDependencies": {
     "react": "^19.1.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
+    "oxlint": "catalog:",
+    "oxfmt": "catalog:",
     "@repo/typescript-config": "*",
     "@tailwindcss/cli": "^4.1.11",
     "@types/react": "^19.1.8",
-    "eslint": "^9.30.1",
     "tailwindcss": "^4.1.11",
     "tsup": "^8.5.0",
     "typescript": "5.8.2"

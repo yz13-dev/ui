@@ -1,9 +1,13 @@
 import { Button } from "@yz13/ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@yz13/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@yz13/ui/dropdown-menu";
 import { Icons } from "@yz13/ui/icons";
 import { Input } from "@yz13/ui/input";
 import { Skeleton } from "@yz13/ui/skeleton";
-
 
 const Component = () => {
   return (
@@ -19,10 +23,14 @@ const Component = () => {
         <div className="flex items-center justify-between w-full gap-4">
           <Input placeholder="Поиск" />
           <div className="flex gap-2 items-center">
-            <Button variant="outline"><Icons.FilterIcon /></Button>
+            <Button variant="outline">
+              <Icons.FilterIcon />
+            </Button>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline"><Icons.SortAscIcon /></Button>
+                <Button variant="outline">
+                  <Icons.SortAscIcon />
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
                 <DropdownMenuItem>Наиболее популярные</DropdownMenuItem>
@@ -33,9 +41,9 @@ const Component = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-Component.displayName = "Page"
+Component.displayName = "Page";
 
 export default Component;

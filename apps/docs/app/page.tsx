@@ -10,5 +10,5 @@ export default function () {
       <Button variant="outline">Button</Button>
       <Button variant="secondary">Button</Button>
     </div>
-  )
+  );
 }

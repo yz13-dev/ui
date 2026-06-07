@@ -2,15 +2,7 @@
 
 import { Input } from "@/components/ui/input";
 import useDebounce from "@/hooks/use-debounce";
-import {
-  AudioLines,
-  BarChart2,
-  LayoutGrid,
-  PlaneTakeoff,
-  Search,
-  Send,
-  Video,
-} from "lucide-react";
+import { AudioLines, BarChart2, LayoutGrid, PlaneTakeoff, Search, Send, Video } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
@@ -125,8 +117,7 @@ function ActionSearchBar({
 
     const normalizedQuery = debouncedQuery.toLowerCase().trim();
     return actions.filter((action) => {
-      const searchableText =
-        `${action.label} ${action.description || ""}`.toLowerCase();
+      const searchableText = `${action.label} ${action.description || ""}`.toLowerCase();
       return searchableText.includes(normalizedQuery);
     });
   }, [debouncedQuery, actions]);
@@ -142,14 +133,11 @@ function ActionSearchBar({
     setActiveIndex(-1);
   }, [filteredActions, isFocused]);
 
-  const handleInputChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setQuery(e.target.value);
-      setIsTyping(true);
-      setActiveIndex(-1);
-    },
-    []
-  );
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
+    setIsTyping(true);
+    setActiveIndex(-1);
+  }, []);
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -158,15 +146,11 @@ function ActionSearchBar({
       switch (e.key) {
         case "ArrowDown":
           e.preventDefault();
-          setActiveIndex((prev) =>
-            prev < result.actions.length - 1 ? prev + 1 : 0
-          );
+          setActiveIndex((prev) => (prev < result.actions.length - 1 ? prev + 1 : 0));
           break;
         case "ArrowUp":
           e.preventDefault();
-          setActiveIndex((prev) =>
-            prev > 0 ? prev - 1 : result.actions.length - 1
-          );
+          setActiveIndex((prev) => (prev > 0 ? prev - 1 : result.actions.length - 1));
           break;
         case "Enter":
           e.preventDefault();
@@ -180,7 +164,7 @@ function ActionSearchBar({
           break;
       }
     },
-    [result?.actions, activeIndex]
+    [result?.actions, activeIndex],
   );
 
   const handleActionClick = useCallback((action: Action) => {
@@ -223,9 +207,7 @@ function ActionSearchBar({
               aria-expanded={isFocused && !!result}
               aria-autocomplete="list"
               aria-activedescendant={
-                activeIndex >= 0
-                  ? `action-${result?.actions[activeIndex]?.id}`
-                  : undefined
+                activeIndex >= 0 ? `action-${result?.actions[activeIndex]?.id}` : undefined
               }
               id="search"
               autoComplete="off"
@@ -276,37 +258,27 @@ function ActionSearchBar({
                     <motion.li
                       key={action.id}
                       id={`action-${action.id}`}
-                      className={`px-3 py-2 flex items-center justify-between hover:bg-gray-200 dark:hover:bg-zinc-900 cursor-pointer rounded-md ${activeIndex ===
-                        result.actions.indexOf(action)
-                        ? "bg-gray-100 dark:bg-zinc-800"
-                        : ""
-                        }`}
+                      className={`px-3 py-2 flex items-center justify-between hover:bg-gray-200 dark:hover:bg-zinc-900 cursor-pointer rounded-md ${
+                        activeIndex === result.actions.indexOf(action)
+                          ? "bg-gray-100 dark:bg-zinc-800"
+                          : ""
+                      }`}
                       variants={ANIMATION_VARIANTS.item}
                       layout
-                      onClick={() =>
-                        handleActionClick(action)
-                      }
+                      onClick={() => handleActionClick(action)}
                       role="option"
-                      aria-selected={
-                        activeIndex ===
-                        result.actions.indexOf(action)
-                      }
+                      aria-selected={activeIndex === result.actions.indexOf(action)}
                     >
                       <div className="flex items-center gap-2 justify-between">
                         <div className="flex items-center gap-2">
-                          <span
-                            className="text-gray-500"
-                            aria-hidden="true"
-                          >
+                          <span className="text-gray-500" aria-hidden="true">
                             {action.icon}
                           </span>
                           <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
                             {action.label}
                           </span>
                           {action.description && (
-                            <span className="text-xs text-gray-400">
-                              {action.description}
-                            </span>
+                            <span className="text-xs text-gray-400">{action.description}</span>
                           )}
                         </div>
                       </div>
@@ -320,9 +292,7 @@ function ActionSearchBar({
                           </span>
                         )}
                         {action.end && (
-                          <span className="text-xs text-gray-400 text-right">
-                            {action.end}
-                          </span>
+                          <span className="text-xs text-gray-400 text-right">{action.end}</span>
                         )}
                       </div>
                     </motion.li>

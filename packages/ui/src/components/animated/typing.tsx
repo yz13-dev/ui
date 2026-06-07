@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion, useInView, type UseInViewOptions } from 'motion/react';
-import * as React from 'react';
+import { motion, useInView, type UseInViewOptions } from "motion/react";
+import * as React from "react";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 function CursorBlinker({ className }: { className?: string }) {
   return (
@@ -16,25 +16,22 @@ function CursorBlinker({ className }: { className?: string }) {
             duration: 1,
             repeat: Infinity,
             repeatDelay: 0,
-            ease: 'linear',
+            ease: "linear",
             times: [0, 0.5, 0.5, 1],
           },
         },
       }}
       animate="blinking"
-      className={cn(
-        'inline-block h-5 w-[1px] translate-y-1 bg-black dark:bg-white',
-        className,
-      )}
+      className={cn("inline-block h-5 w-[1px] translate-y-1 bg-black dark:bg-white", className)}
     />
   );
 }
 
-type TypingTextProps = Omit<React.ComponentProps<'span'>, 'children'> & {
+type TypingTextProps = Omit<React.ComponentProps<"span">, "children"> & {
   duration?: number;
   delay?: number;
   inView?: boolean;
-  inViewMargin?: UseInViewOptions['margin'];
+  inViewMargin?: UseInViewOptions["margin"];
   inViewOnce?: boolean;
   cursor?: boolean;
   loop?: boolean;
@@ -49,7 +46,7 @@ function TypingText({
   duration = 100,
   delay = 0,
   inView = false,
-  inViewMargin = '0px',
+  inViewMargin = "0px",
   inViewOnce = true,
   cursor = false,
   loop = false,
@@ -69,13 +66,13 @@ function TypingText({
   const isInView = !inView || inViewResult;
 
   const [started, setStarted] = React.useState(false);
-  const [displayedText, setDisplayedText] = React.useState<string>('');
+  const [displayedText, setDisplayedText] = React.useState<string>("");
 
   React.useEffect(() => {
     // Reset animation when text changes (if animateOnChange is true)
     if (animateOnChange) {
       setStarted(false);
-      setDisplayedText('');
+      setDisplayedText("");
     }
 
     if (isInView) {
@@ -94,7 +91,7 @@ function TypingText({
   React.useEffect(() => {
     if (!started) return;
     const timeoutIds: Array<ReturnType<typeof setTimeout>> = [];
-    const texts: string[] = typeof text === 'string' ? [text] : text;
+    const texts: string[] = typeof text === "string" ? [text] : text;
 
     const typeText = (str: string, onComplete: () => void) => {
       let currentIndex = 0;
@@ -127,13 +124,13 @@ function TypingText({
     };
 
     const animateTexts = (index: number) => {
-      typeText(texts[index] ?? '', () => {
+      typeText(texts[index] ?? "", () => {
         const isLast = index === texts.length - 1;
         if (isLast && !loop) {
           return;
         }
         const id = setTimeout(() => {
-          eraseText(texts[index] ?? '', () => {
+          eraseText(texts[index] ?? "", () => {
             const nextIndex = isLast ? 0 : index + 1;
             animateTexts(nextIndex);
           });

@@ -3,13 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import {
-  AlertCircleIcon,
-  ArchiveXIcon,
-  BanIcon,
-  Trash2Icon,
-  XCircleIcon,
-} from "lucide-react";
+import { AlertCircleIcon, ArchiveXIcon, BanIcon, Trash2Icon, XCircleIcon } from "lucide-react";
 import { motion, useAnimation } from "motion/react";
 import { useState } from "react";
 
@@ -54,8 +48,7 @@ const holdButtonVariants = cva("min-w-40 relative overflow-hidden touch-none", {
 });
 
 interface HoldButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-  VariantProps<typeof holdButtonVariants> {
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof holdButtonVariants> {
   holdDuration?: number;
 }
 
@@ -107,20 +100,15 @@ export default function HoldButton({
           "bg-red-200/30 dark:bg-red-300/30": variant === "red",
           "bg-green-200/30 dark:bg-green-300/30": variant === "green",
           "bg-blue-200/30 dark:bg-blue-300/30": variant === "blue",
-          "bg-orange-200/30 dark:bg-orange-300/30":
-            variant === "orange",
+          "bg-orange-200/30 dark:bg-orange-300/30": variant === "orange",
           "bg-gray-200/30 dark:bg-gray-300/30": variant === "grey",
         })}
       />
       <span className="relative z-10 w-full flex items-center justify-center gap-2">
-        {(variant === "red" || !variant) && (
-          <Trash2Icon className="w-4 h-4" />
-        )}
+        {(variant === "red" || !variant) && <Trash2Icon className="w-4 h-4" />}
         {variant === "green" && <ArchiveXIcon className="w-4 h-4" />}
         {variant === "blue" && <XCircleIcon className="w-4 h-4" />}
-        {variant === "orange" && (
-          <AlertCircleIcon className="w-4 h-4" />
-        )}
+        {variant === "orange" && <AlertCircleIcon className="w-4 h-4" />}
         {variant === "grey" && <BanIcon className="w-4 h-4" />}
         {!isHolding ? "Hold me" : "Release"}
       </span>
