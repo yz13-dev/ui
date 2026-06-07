@@ -6,7 +6,6 @@ import { gitConfig } from './shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      // JSX supported
       title: <YZ13WithTextIcon className="h-9" />,
     },
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,

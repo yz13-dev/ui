@@ -4,9 +4,17 @@
 
 @import "open-color";
 
-@source "./";
+@source "../../";
 
 @custom-variant dark (&:is(.dark *));
+
+@custom-variant data-open {
+
+  &:where([data-state="open"]),
+  &:where([data-open]:not([data-open="false"])) {
+    @slot;
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -92,14 +100,6 @@
       height: var(--radix-accordion-content-height,
           var(--accordion-panel-height, auto));
     }
-  }
-}
-
-@custom-variant data-open {
-
-  &:where([data-state="open"]),
-  &:where([data-open]:not([data-open="false"])) {
-    @slot;
   }
 }
 
@@ -216,6 +216,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
 
   html {
     scrollbar-color: var(--secondary) var(--background);

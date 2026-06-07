@@ -27,14 +27,14 @@
     "oxfmt": "catalog:",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
-    "@tailwindcss/postcss": "^4.3.0",
+    "@tailwindcss/postcss": "catalog:",
     "@types/mdx": "^2.0.13",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.16",
     "@types/react-dom": "^19.2.3",
     "postcss": "^8.5.15",
     "serve": "^14.2.6",
-    "tailwindcss": "^4.3.0",
+    "tailwindcss": "catalog:",
     "typescript": "^6.0.3"
   }
 }

@@ -1,3 +1,4 @@
+import { CardsDemo } from "./cards";
 
 export default function HomePage() {
   return (
@@ -10,7 +11,9 @@ export default function HomePage() {
           Набор прекрасно разработанных компонентов, которые вы можете настраивать, расширять и дополнять. Начните здесь, а затем сделайте его своим собственным. Открытый исходный код. Открытый код.
         </p>
       </div>
-      <div className="w-full container mx-auto"></div>
+      <section className="hidden md:block">
+        <CardsDemo />
+      </section>
     </>
   );
 }
