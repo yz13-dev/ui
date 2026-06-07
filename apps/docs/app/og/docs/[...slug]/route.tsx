@@ -47,7 +47,7 @@ export async function GET(_req: Request, { params }: RouteContext<'/og/docs/[...
 
   const ogBgUrl = isDev
     ? "http://localhost:3000/og-bg.png"
-    : "/og-bg.png";
+    : "https://ui.yz13.dev/og-bg.png";
 
   const page = source.getPage(slug.slice(0, -1));
   if (!page) notFound();
