@@ -3,7 +3,7 @@ import type { ComponentPropsWithoutRef } from "react";
 
 type IconProps = ComponentPropsWithoutRef<"svg">;
 
-function YZ13Icon({ width = "40", height = "40", className, ...props }: IconProps) {
+function YZ13Icon({ width = "100%", height = "100%", className, ...props }: IconProps) {
   return (
     <svg
       className={className}
@@ -28,11 +28,11 @@ function YZ13Icon({ width = "40", height = "40", className, ...props }: IconProp
   )
 }
 
-function YZ13WithTextIcon({ className, ...props }: IconProps) {
+function YZ13WithTextIcon({ width = "100%", height = "100%", className, ...props }: IconProps) {
   return (
     <svg
-      width="100%"
-      height="100%"
+      width={width}
+      height={height}
       className={cn("[&>*]:foreground", className)}
       viewBox="0 0 239 62"
       fill="none"
