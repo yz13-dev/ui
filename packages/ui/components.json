@@ -10,12 +10,15 @@
     "cssVariables": true,
     "prefix": ""
   },
+  "iconLibrary": "lucide",
+  "rtl": false,
+  "menuColor": "inverted-translucent",
+  "menuAccent": "subtle",
   "aliases": {
-    "components": "@/components",
-    "utils": "@/lib/utils",
-    "ui": "@/components/ui",
-    "lib": "@/lib",
-    "hooks": "@/hooks"
-  },
-  "iconLibrary": "lucide"
+    "components": "@yz13/ui/components",
+    "utils": "@yz13/ui/lib/utils",
+    "ui": "@yz13/ui/components",
+    "lib": "@yz13/ui/lib",
+    "hooks": "@yz13/ui/hooks"
+  }
 }

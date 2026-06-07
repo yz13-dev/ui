@@ -5,14 +5,28 @@
   ],
   "plugins": [
     "typescript",
-    "unicorn",
-    "oxc"
+    "react",
+    "import",
+    "nextjs"
   ],
-  "categories": {
-    "correctness": "error"
-  },
-  "rules": {},
+  "categories": {},
   "env": {
     "builtin": true
-  }
+  },
+  "settings": {
+    "react": {
+      "version": "19.2.7"
+    },
+    "tailwindcss": {
+      "callees": [
+        "clsx",
+        "cva",
+        "cn"
+      ]
+    }
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    "dist/"
+  ]
 }

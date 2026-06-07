@@ -1,19 +1,17 @@
-import "@/styles/globals.css";
-import { cn } from "@yz13/ui/utils";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
+import { Provider } from '@/components/provider';
+import './global.css';
 
-const sans = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-sans" });
+const inter = Inter({
+  subsets: ['latin'],
+});
 
-export const metadata: Metadata = {
-  title: "Docs",
-  description: "UI components for React",
-};
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang="en" className={cn("", sans.variable)}>
-      <body>{children}</body>
+    <html lang="en" className={inter.className} suppressHydrationWarning>
+      <body className="flex flex-col min-h-screen">
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }
