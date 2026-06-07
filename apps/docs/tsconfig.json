@@ -13,6 +13,12 @@
       "@yz13/ui/*": [
         "../../packages/ui/*"
       ],
+      "collections/*": [
+        "./.source/*"
+      ],
+      "fumadocs-mdx:collections/*": [
+        "./.source/*"
+      ]
     }
   },
   "include": [

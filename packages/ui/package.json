@@ -31,7 +31,6 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
     "check-types": "tsc --noEmit",
     "dev": "tsup --watch",
     "lint": "oxlint",
