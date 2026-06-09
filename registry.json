@@ -9,7 +9,7 @@
       "files": [
         {
           "type": "registry:component",
-          "path": "registry/components/logo/checkhouse.tsx",
+          "path": "packages/ui/src/components/logo/checkhouse.tsx",
           "target": "components/logo/checkhouse.tsx"
         }
       ]
