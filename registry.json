@@ -4,13 +4,35 @@
   "homepage": "https://github.com/yz13/ui",
   "items": [
     {
-      "name": "Checkhouse logo",
+      "name": "checkhouse",
       "type": "registry:block",
       "files": [
         {
           "type": "registry:component",
           "path": "packages/ui/src/components/logo/checkhouse.tsx",
           "target": "components/logo/checkhouse.tsx"
+        }
+      ]
+    },
+    {
+      "name": "yz13",
+      "type": "registry:block",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "packages/ui/src/components/logo/yz13.tsx",
+          "target": "components/logo/yz13.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hostkitjs",
+      "type": "registry:block",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "packages/ui/src/components/logo/hostkitjs.tsx",
+          "target": "components/logo/hostkitjs.tsx"
         }
       ]
     }
