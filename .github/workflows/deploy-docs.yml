@@ -4,9 +4,6 @@ on:
   push:
     branches: [main]
     paths:
-      - "apps/docs/**"
-      - "packages/ui/**"
-      - "packages/utils/**"
       - ".github/workflows/deploy-docs.yml"
   workflow_dispatch:
 
@@ -35,11 +32,9 @@ jobs:
         run: bun install
 
       - name: Build docs app
-        working-directory: apps/docs
         run: bun run build
         env:
           NODE_ENV: production
 
       - name: "Deploy docs to hostkit"
-        working-directory: apps/docs # if you use monorepo
         run: "bunx hostkitjs@latest deploy ./out --project ui --api-key ${{ secrets.HOSTKITJS_API_KEY }}"
