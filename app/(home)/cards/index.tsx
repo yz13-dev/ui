@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { AccountAccess } from "./account-access"
 import { AnalyticsCard } from "./analytics-card"
 import { ClaimableBalance } from "./claimable-balance"
@@ -86,7 +87,9 @@ export function CardsDemo() {
         <div className="flex flex-col items-start gap-(--gap)">
           <UIElements />
           <SidebarNav />
-          <SavingsTargets />
+          <Suspense fallback={<SkeletonSavingsTargets />}>
+            <SavingsTargets />
+          </Suspense>
         </div>
         <div className="hidden flex-col gap-(--gap) lg:flex">
           <ContributionHistory />
@@ -95,7 +98,9 @@ export function CardsDemo() {
         </div>
         <div className="hidden flex-col gap-(--gap) 2xl:flex!">
           <NewMilestone />
-          <PayoutThreshold />
+          <Suspense fallback={<SkeletonPayoutThreshold />}>
+            <PayoutThreshold />
+          </Suspense>
           <AccountAccess />
         </div>
         <div className="hidden flex-col gap-(--gap) md:flex">

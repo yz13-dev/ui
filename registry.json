@@ -35,6 +35,20 @@
           "target": "components/logo/hostkitjs.tsx"
         }
       ]
+    },
+    {
+      "name": "button",
+      "type": "registry:block",
+      "dependencies": [
+        "gradient-border-plugin"
+      ],
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/components/ui/button.tsx",
+          "target": "components/ui/button.tsx"
+        }
+      ]
     }
   ]
 }
