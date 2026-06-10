@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -25,22 +26,24 @@ export function AnalyticsCard() {
           </Button>
         </CardAction>
       </CardHeader>
-      <svg
-        viewBox="0 0 100 86"
-        preserveAspectRatio="none"
-        className="aspect-[1/0.35] w-full text-chart-1"
-        role="img"
-        aria-label="Visitor trend"
-      >
-        <path d={areaPath} fill="currentColor" opacity="0.28" />
-        <path
-          d={strokePath}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          vectorEffect="non-scaling-stroke"
-        />
-      </svg>
+      <CardContent>
+        <svg
+          viewBox="0 0 100 86"
+          preserveAspectRatio="none"
+          className="aspect-[1/0.35] w-full text-chart-1"
+          role="img"
+          aria-label="Visitor trend"
+        >
+          <path d={areaPath} fill="currentColor" opacity="0.28" />
+          <path
+            d={strokePath}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            vectorEffect="non-scaling-stroke"
+          />
+        </svg>
+      </CardContent>
     </Card>
   )
 }

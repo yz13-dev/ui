@@ -3,8 +3,6 @@ name: Deploy docs app
 on:
   push:
     branches: [main]
-    paths:
-      - ".github/workflows/deploy-docs.yml"
   workflow_dispatch:
 
 jobs:
