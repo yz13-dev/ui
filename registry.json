@@ -48,6 +48,17 @@
       ]
     },
     {
+      "name": "imc",
+      "type": "registry:block",
+      "files": [
+        {
+          "type": "registry:component",
+          "path": "registry/components/logo/imc.tsx",
+          "target": "components/logo/imc.tsx"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:block",
       "dependencies": [
