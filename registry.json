@@ -15,6 +15,85 @@
       ]
     },
     {
+      "name": "fonts",
+      "type": "registry:lib",
+      "registryDependencies": [
+        "theme"
+      ],
+      "files": [
+        {
+          "type": "registry:lib",
+          "path": "registry/lib/fonts.ts",
+          "target": "lib/fonts.ts"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/golos-text-regular.woff2",
+          "target": "lib/fonts/golos-text-regular.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/golos-text-500.woff2",
+          "target": "lib/fonts/golos-text-500.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/golos-text-600.woff2",
+          "target": "lib/fonts/golos-text-600.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/golos-text-700.woff2",
+          "target": "lib/fonts/golos-text-700.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/jetbrains-mono-regular.woff2",
+          "target": "lib/fonts/jetbrains-mono-regular.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/jetbrains-mono-500.woff2",
+          "target": "lib/fonts/jetbrains-mono-500.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-regular.woff2",
+          "target": "lib/fonts/playfair-display-regular.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-italic.woff2",
+          "target": "lib/fonts/playfair-display-italic.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-500.woff2",
+          "target": "lib/fonts/playfair-display-500.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-500-italic.woff2",
+          "target": "lib/fonts/playfair-display-500-italic.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-600.woff2",
+          "target": "lib/fonts/playfair-display-600.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/playfair-display-600-italic.woff2",
+          "target": "lib/fonts/playfair-display-600-italic.woff2"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/lib/fonts/geist-pixel-square.woff2",
+          "target": "lib/fonts/geist-pixel-square.woff2"
+        }
+      ]
+    },
+    {
       "name": "checkhouse",
       "type": "registry:block",
       "files": [
