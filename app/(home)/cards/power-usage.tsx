@@ -4,8 +4,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
+} from "@/registry/components/ui/card"
+import { Separator } from "@/registry/components/ui/separator"
 
 const chartData = [
   { hour: "6a", usage: 1.2 },

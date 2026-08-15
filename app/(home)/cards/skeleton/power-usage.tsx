@@ -3,8 +3,8 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-} from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+} from "@/registry/components/ui/card"
+import { Skeleton } from "@/registry/components/ui/skeleton"
 
 const bars = [30, 70, 80, 60, 90, 75, 100, 85]
 

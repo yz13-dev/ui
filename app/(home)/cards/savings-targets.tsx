@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/registry/components/ui/card"
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemFooter,
   ItemGroup,
-} from "@/components/ui/item"
-import { Progress } from "@/components/ui/progress"
+} from "@/registry/components/ui/item"
+import { Progress } from "@/registry/components/ui/progress"
 
 export function SavingsTargets() {
   return (

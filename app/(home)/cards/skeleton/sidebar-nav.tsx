@@ -1,5 +1,5 @@
-import { Card } from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Card } from "@/registry/components/ui/card"
+import { Skeleton } from "@/registry/components/ui/skeleton"
 
 const groupA = [0, 1, 2, 3, 4]
 const groupB = [0, 1, 2, 3, 4]

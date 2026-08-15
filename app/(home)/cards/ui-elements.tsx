@@ -10,12 +10,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
-import { Card, CardContent } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
+} from "@/registry/components/ui/alert-dialog"
+import { Badge } from "@/registry/components/ui/badge"
+import { Button } from "@/registry/components/ui/button"
+import { ButtonGroup } from "@/registry/components/ui/button-group"
+import { Card, CardContent } from "@/registry/components/ui/card"
+import { Checkbox } from "@/registry/components/ui/checkbox"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -24,17 +24,17 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { Field, FieldGroup } from "@/components/ui/field"
+} from "@/registry/components/ui/dropdown-menu"
+import { Field, FieldGroup } from "@/registry/components/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/components/ui/input-group"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Switch } from "@/components/ui/switch"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/registry/components/ui/input-group"
+import { RadioGroup, RadioGroupItem } from "@/registry/components/ui/radio-group"
+import { Switch } from "@/registry/components/ui/switch"
+import { Textarea } from "@/registry/components/ui/textarea"
 import { ArrowRightIcon, ArrowUpIcon, SearchIcon } from "lucide-react"
 
 export function UIElements() {

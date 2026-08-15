@@ -1,5 +1,5 @@
 import { ActivityIcon, ArrowLeftRightIcon, BanknoteIcon, BellIcon, BookOpenIcon, CalendarIcon, ChartBarIcon, CreditCardIcon, FileIcon, GlobeIcon, HelpCircleIcon, MessageCircleIcon, PaintBucketIcon, PieChartIcon, ShieldIcon, TargetIcon, UserIcon, VaultIcon, WalletIcon } from "@/components/icons"
-import { Card } from "@/components/ui/card"
+import { Card } from "@/registry/components/ui/card"
 import {
   Sidebar,
   SidebarContent,
@@ -10,7 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/components/ui/sidebar"
+} from "@/registry/components/ui/sidebar"
 import { cn } from "@/lib/utils"
 import * as React from "react"
 

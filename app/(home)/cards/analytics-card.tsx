@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { Badge } from "@/registry/components/ui/badge"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardAction,
@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/registry/components/ui/card"
 
 const areaPath = "M0 52L18 40L36 46L54 70L72 50L100 49V86H0Z"
 const strokePath = "M0 52L18 40L36 46L54 70L72 50L100 49"

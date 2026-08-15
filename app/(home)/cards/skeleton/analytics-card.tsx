@@ -1,5 +1,5 @@
-import { Card, CardAction, CardHeader } from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Card, CardAction, CardHeader } from "@/registry/components/ui/card"
+import { Skeleton } from "@/registry/components/ui/skeleton"
 
 export function AnalyticsCard() {
   return (

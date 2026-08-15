@@ -5,16 +5,16 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+} from "@/registry/components/ui/breadcrumb"
+import { Button } from "@/registry/components/ui/button"
+import { Card, CardContent, CardHeader } from "@/registry/components/ui/card"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/registry/components/ui/dropdown-menu"
 import {
   Item,
   ItemContent,
@@ -22,7 +22,7 @@ import {
   ItemGroup,
   ItemMedia,
   ItemTitle,
-} from "@/components/ui/item"
+} from "@/registry/components/ui/item"
 import { ArrowRightIcon, CalendarIcon, EllipsisVerticalIcon, RefreshCcwIcon, SettingsIcon } from "lucide-react"
 
 export function Payments() {

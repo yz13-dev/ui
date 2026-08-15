@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardAction,
@@ -8,15 +8,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
+} from "@/registry/components/ui/card"
+import { Field, FieldGroup, FieldLabel } from "@/registry/components/ui/field"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/components/ui/input-group"
-import { Item, ItemContent } from "@/components/ui/item"
+} from "@/registry/components/ui/input-group"
+import { Item, ItemContent } from "@/registry/components/ui/item"
 import {
   Select,
   SelectContent,
@@ -24,8 +24,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Separator } from "@/components/ui/separator"
+} from "@/registry/components/ui/select"
+import { Separator } from "@/registry/components/ui/separator"
 import { XIcon } from "lucide-react"
 
 const FROM_ACCOUNTS = [
