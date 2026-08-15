@@ -1,0 +1,12 @@
+{
+  "name": "Dialog",
+  "slug": "dialog",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Modal window that overlays the page content, with a title, description, body and focus-trapped interaction.",
+  "tags": ["dialog", "modal", "overlay"],
+  "files": ["dialog.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

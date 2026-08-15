@@ -1,0 +1,15 @@
+{
+  "name": "Input",
+  "slug": "input",
+  "kind": "component",
+  "category": "forms",
+  "description": "Single-line text input styled to match the design system, supporting all native input types.",
+  "tags": ["input", "text", "form", "field"],
+  "files": ["input.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

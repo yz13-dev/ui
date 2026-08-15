@@ -1,0 +1,15 @@
+{
+  "name": "Checkbox",
+  "slug": "checkbox",
+  "kind": "component",
+  "category": "forms",
+  "description": "Binary input for toggling a single option on or off, with support for an indeterminate state.",
+  "tags": ["checkbox", "input", "form"],
+  "files": ["checkbox.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

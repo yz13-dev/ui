@@ -1,0 +1,11 @@
+{
+  "name": "Spinner",
+  "slug": "spinner",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Small rotating loading indicator for inline or button-level busy states.",
+  "tags": ["spinner", "loading", "feedback"],
+  "files": ["spinner.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

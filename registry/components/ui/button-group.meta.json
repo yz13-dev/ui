@@ -1,0 +1,12 @@
+{
+  "name": "Button Group",
+  "slug": "button-group",
+  "kind": "component",
+  "category": "buttons",
+  "description": "Groups adjacent buttons or inputs into a single visually joined control with shared borders.",
+  "tags": ["button", "group", "toolbar", "form"],
+  "files": ["button-group.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

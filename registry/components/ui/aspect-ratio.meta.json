@@ -1,0 +1,11 @@
+{
+  "name": "Aspect Ratio",
+  "slug": "aspect-ratio",
+  "kind": "component",
+  "category": "layout",
+  "description": "Constrains its content to a fixed width-to-height ratio, commonly used for images and embeds.",
+  "tags": ["aspect ratio", "layout", "media"],
+  "files": ["aspect-ratio.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

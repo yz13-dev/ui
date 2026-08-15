@@ -1,0 +1,12 @@
+{
+  "name": "Item",
+  "slug": "item",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Generic row primitive with media, title, description and action slots, used for lists and menus.",
+  "tags": ["item", "list", "row", "data-display"],
+  "files": ["item.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

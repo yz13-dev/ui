@@ -1,0 +1,28 @@
+{
+  "name": "Toggle Group",
+  "slug": "toggle-group",
+  "kind": "component",
+  "category": "buttons",
+  "description": "Set of two-state toggle buttons that share variant, size and spacing, supporting single or multiple selection.",
+  "tags": ["toggle", "group", "button", "selection"],
+  "files": ["toggle-group.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "variant",
+      "label": "Variant",
+      "type": "select",
+      "options": ["default", "outline"],
+      "defaultValue": "default"
+    },
+    {
+      "prop": "size",
+      "label": "Size",
+      "type": "select",
+      "options": ["sm", "default", "lg"],
+      "defaultValue": "default"
+    }
+  ]
+}

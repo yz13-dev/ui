@@ -1,0 +1,12 @@
+{
+  "name": "Command",
+  "slug": "command",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Filterable command palette list with grouped items and keyboard navigation, the base for search dialogs.",
+  "tags": ["command", "palette", "search", "cmdk"],
+  "files": ["command.tsx"],
+  "dependencies": ["cmdk"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

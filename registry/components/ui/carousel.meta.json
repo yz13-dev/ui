@@ -1,0 +1,21 @@
+{
+  "name": "Carousel",
+  "slug": "carousel",
+  "kind": "component",
+  "category": "layout",
+  "description": "Swipeable slide viewport with previous/next controls, built on Embla Carousel.",
+  "tags": ["carousel", "slider", "gallery", "layout"],
+  "files": ["carousel.tsx"],
+  "dependencies": ["embla-carousel-react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "orientation",
+      "label": "Orientation",
+      "type": "select",
+      "options": ["horizontal", "vertical"],
+      "defaultValue": "horizontal"
+    }
+  ]
+}

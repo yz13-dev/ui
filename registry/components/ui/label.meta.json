@@ -1,0 +1,11 @@
+{
+  "name": "Label",
+  "slug": "label",
+  "kind": "component",
+  "category": "forms",
+  "description": "Accessible caption for a form control, associating descriptive text with its input via htmlFor.",
+  "tags": ["label", "form", "field", "accessibility"],
+  "files": ["label.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

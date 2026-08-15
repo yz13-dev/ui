@@ -1,0 +1,12 @@
+{
+  "name": "Tabs",
+  "slug": "tabs",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Switches between multiple content panels via a row of labeled triggers, one visible at a time.",
+  "tags": ["tabs", "navigation", "panels"],
+  "files": ["tabs.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

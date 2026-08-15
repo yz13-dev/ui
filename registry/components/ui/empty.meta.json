@@ -1,0 +1,11 @@
+{
+  "name": "Empty",
+  "slug": "empty",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Centered placeholder for empty states, pairing an icon or media with a title, description and action.",
+  "tags": ["empty", "placeholder", "feedback", "state"],
+  "files": ["empty.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

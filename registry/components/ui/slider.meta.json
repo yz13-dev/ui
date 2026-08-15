@@ -1,0 +1,15 @@
+{
+  "name": "Slider",
+  "slug": "slider",
+  "kind": "component",
+  "category": "forms",
+  "description": "Draggable track control for choosing a numeric value or range within min/max bounds.",
+  "tags": ["slider", "range", "form", "input"],
+  "files": ["slider.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Hover Card",
+  "slug": "hover-card",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Preview panel that appears when hovering over a trigger, for showing extra context like a user profile.",
+  "tags": ["hover", "card", "overlay", "preview"],
+  "files": ["hover-card.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

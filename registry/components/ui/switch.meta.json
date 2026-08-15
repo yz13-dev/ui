@@ -1,0 +1,15 @@
+{
+  "name": "Switch",
+  "slug": "switch",
+  "kind": "component",
+  "category": "forms",
+  "description": "Toggle control for switching a setting on or off, styled as a sliding track and thumb.",
+  "tags": ["switch", "toggle", "form", "settings"],
+  "files": ["switch.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

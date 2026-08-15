@@ -1,0 +1,12 @@
+{
+  "name": "Drawer",
+  "slug": "drawer",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Gesture-friendly panel that slides up from the bottom of the screen, well suited to mobile viewports.",
+  "tags": ["drawer", "panel", "overlay", "mobile"],
+  "files": ["drawer.tsx"],
+  "dependencies": ["vaul"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

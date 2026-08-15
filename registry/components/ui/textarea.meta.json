@@ -1,0 +1,14 @@
+{
+  "name": "Textarea",
+  "slug": "textarea",
+  "kind": "component",
+  "category": "forms",
+  "description": "Multi-line text input for longer free-form content such as comments or messages.",
+  "tags": ["textarea", "input", "form", "text"],
+  "files": ["textarea.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

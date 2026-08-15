@@ -1,0 +1,11 @@
+{
+  "name": "Field",
+  "slug": "field",
+  "kind": "component",
+  "category": "forms",
+  "description": "Layout wrapper that pairs a label, control, description and error message into a single consistent form row.",
+  "tags": ["field", "form", "label", "validation"],
+  "files": ["field.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

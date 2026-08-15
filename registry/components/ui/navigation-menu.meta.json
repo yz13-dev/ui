@@ -1,0 +1,12 @@
+{
+  "name": "Navigation Menu",
+  "slug": "navigation-menu",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Top-level site navigation with triggers that expand into rich dropdown panels of links.",
+  "tags": ["navigation", "menu", "site header"],
+  "files": ["navigation-menu.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

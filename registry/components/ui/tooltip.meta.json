@@ -1,0 +1,12 @@
+{
+  "name": "Tooltip",
+  "slug": "tooltip",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Small floating label that appears on hover or focus to describe a control.",
+  "tags": ["tooltip", "overlay", "hint"],
+  "files": ["tooltip.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

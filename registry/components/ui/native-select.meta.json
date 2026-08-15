@@ -1,0 +1,14 @@
+{
+  "name": "Native Select",
+  "slug": "native-select",
+  "kind": "component",
+  "category": "forms",
+  "description": "Styled wrapper around the native browser <select> element, for lightweight option pickers without a custom popup.",
+  "tags": ["select", "dropdown", "form", "native"],
+  "files": ["native-select.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}
