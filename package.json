@@ -26,6 +26,7 @@
     "lucide-react": "^1.17.0",
     "next": "^16.3.1",
     "next-themes": "^0.4.6",
+    "nuqs": "^2.9.5",
     "open-color": "^1.9.1",
     "react": "^19.2.7",
     "react-day-picker": "^10.0.1",

@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import { ExternalLinkIcon } from "lucide-react"
 import { useTheme } from "next-themes"
+import { useEffect, useRef, useState } from "react"
 
 import { PREVIEW_HEIGHT_MESSAGE } from "@/components/preview-height-reporter"
 import { VIEWPORT_WIDTH, ViewportToggle, type Viewport } from "@/components/viewport-toggle"
@@ -53,7 +53,7 @@ export function PreviewFrame({
           ref={iframeRef}
           src={previewUrl}
           style={{ width: VIEWPORT_WIDTH[viewport], height }}
-          className="max-w-full shrink-0 rounded-lg bg-background transition-[width]"
+          className="max-w-full shrink-0 rounded-lg border bg-background transition-[width]"
           title={`${slug} preview`}
         />
       </div>

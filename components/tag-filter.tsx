@@ -28,14 +28,15 @@ export function TagFilter({
 
   return (
     <Combobox items={availableTags} multiple value={value} onValueChange={onChange}>
-      <ComboboxChips ref={anchor} className="w-full max-w-sm">
-        <SearchIcon className="ml-1 size-4 shrink-0 text-muted-foreground" />
+      <ComboboxChips ref={anchor} className="h-10 w-full max-w-sm gap-2 bg-card px-3">
+        <SearchIcon className="size-4.5 shrink-0 text-muted-foreground" />
         {value.map((tag) => (
-          <ComboboxChip key={tag} className="capitalize">
+          <ComboboxChip key={tag} className="h-6 px-2 text-label capitalize">
             {tag}
           </ComboboxChip>
         ))}
         <ComboboxChipsInput
+          className="text-base"
           placeholder={value.length > 0 ? undefined : "Filter by tag..."}
         />
       </ComboboxChips>

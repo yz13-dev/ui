@@ -1,13 +1,16 @@
 "use client"
 
-import { useMemo, useState } from "react"
 import Link from "next/link"
+import { useQueryState } from "nuqs"
+import { useMemo, useState } from "react"
 
-import { RegistryCard } from "@/components/registry-card"
+import { ItemCollection } from "@/components/item-collection"
 import { TagFilter } from "@/components/tag-filter"
+import { ViewToggle } from "@/components/view-toggle"
 import type { CatalogListItem } from "@/lib/registry"
 import { KIND_DIR } from "@/lib/registry-constants"
 import type { RegistryKind } from "@/lib/types"
+import { viewModeParser } from "@/lib/view-mode"
 
 export function CatalogFilterableGrid({
   kind,
@@ -17,9 +20,10 @@ export function CatalogFilterableGrid({
   items: CatalogListItem[]
 }) {
   const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [view, setView] = useQueryState("view", viewModeParser)
 
   const tags = useMemo(
-    () => [...new Set(items.flatMap((item) => item.tags))].sort((a, b) => a.localeCompare(b)),
+    () => [...new Set(items.flatMap((item) => item.tags))].toSorted((a, b) => a.localeCompare(b)),
     [items]
   )
 
@@ -36,18 +40,23 @@ export function CatalogFilterableGrid({
       byCategory.set(item.category, existing)
     }
     return [...byCategory.entries()]
-      .sort(([a], [b]) => a.localeCompare(b))
+      .toSorted(([a], [b]) => a.localeCompare(b))
       .map(
         ([category, categoryItems]) =>
-          [category, categoryItems.slice().sort((a, b) => a.name.localeCompare(b.name))] as const
+          [category, categoryItems.slice().toSorted((a, b) => a.name.localeCompare(b.name))] as const
       )
   }, [filtered])
 
   return (
     <div className="flex flex-col gap-8">
-      {tags.length > 0 ? (
-        <TagFilter tags={tags} value={selectedTags} onChange={setSelectedTags} />
-      ) : null}
+      <div className="flex sm:flex-nowrap flex-wrap items-center sm:justify-between justify-end gap-4">
+        {tags.length > 0 ? (
+          <TagFilter tags={tags} value={selectedTags} onChange={setSelectedTags} />
+        ) : (
+          <div />
+        )}
+        <ViewToggle value={view} onChange={setView} />
+      </div>
 
       {categories.length === 0 ? (
         <p className="text-body text-muted-foreground">No matching items.</p>
@@ -61,11 +70,7 @@ export function CatalogFilterableGrid({
               >
                 {category}
               </Link>
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {categoryItems.map((item) => (
-                  <RegistryCard key={`${item.kind}:${item.slug}`} item={item} />
-                ))}
-              </div>
+              <ItemCollection items={categoryItems} view={view} />
             </section>
           ))}
         </div>

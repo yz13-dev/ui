@@ -17,7 +17,6 @@ export function getCatalogTree(): PageTree.Root {
     return {
       type: "folder",
       name: KIND_LABEL[kind],
-      defaultOpen: true,
       index: { type: "page", name: KIND_LABEL[kind], url: kindUrl },
       children: categories.map(([category, items]) => {
         const categoryUrl = `${kindUrl}/${category}`

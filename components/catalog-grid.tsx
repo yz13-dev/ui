@@ -1,5 +1,7 @@
+import { Suspense } from "react"
+
+import { CatalogCategoryGrid } from "@/components/catalog-category-grid"
 import { CatalogFilterableGrid } from "@/components/catalog-filterable-grid"
-import { RegistryCard } from "@/components/registry-card"
 import { getRegistryIndex, toCatalogListItem } from "@/lib/registry"
 import type { RegistryKind } from "@/lib/types"
 import {
@@ -26,7 +28,16 @@ export function CatalogGrid({
 
   if (category) {
     const items = index.byKindAndCategory[kind].get(category) ?? []
-    return <ItemGrid items={items.slice().sort((a, b) => a.name.localeCompare(b.name))} />
+    return (
+      <Suspense>
+        <CatalogCategoryGrid
+          items={items
+            .slice()
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map(toCatalogListItem)}
+        />
+      </Suspense>
+    )
   }
 
   const items = index.byKind[kind]
@@ -44,19 +55,9 @@ export function CatalogGrid({
     )
   }
 
-  return <CatalogFilterableGrid kind={kind} items={items.map(toCatalogListItem)} />
-}
-
-function ItemGrid({
-  items,
-}: {
-  items: ReturnType<typeof getRegistryIndex>["all"]
-}) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {items.map((item) => (
-        <RegistryCard key={`${item.kind}:${item.slug}`} item={item} />
-      ))}
-    </div>
+    <Suspense>
+      <CatalogFilterableGrid kind={kind} items={items.map(toCatalogListItem)} />
+    </Suspense>
   )
 }

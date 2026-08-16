@@ -5,7 +5,7 @@ import { gitConfig } from './shared';
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {
-      title: <YZ13WithTextIcon className="h-9" />,
+      title: <YZ13WithTextIcon className="h-8" />,
     },
     themeSwitch: {
       mode: 'light-dark-system',

@@ -1,13 +1,69 @@
 ---
-title: Hello World
-description: Your first document
+title: Design principles
+description: How this design system stays restrained, consistent, and evidence-led.
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+This registry is intentionally monochrome-first, typography-driven, and sparing with
+decoration. These are the conventions new components and pages should follow.
 
-## What is Next?
+## Typography roles
 
-<Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
-</Cards>
+Use semantic type roles for content, not arbitrary sizes. Each role is a `--text-*`
+token in `globals.css` and works as a normal Tailwind utility (`text-title`,
+`text-heading-16`, ...). Weight is applied separately with `font-medium` /
+`font-semibold` — the token only sets size and line-height.
+
+| Role | Size | Use for |
+| --- | --- | --- |
+| `text-display` | 48px | A single page-defining statement, used rarely |
+| `text-title` | 32px | The page or document title |
+| `text-heading-24` | 24px | Major section breaks |
+| `text-heading-20` | 20px | Nested subsection headings |
+| `text-heading-16` | 16px | Component-level headings, e.g. `CardTitle` |
+| `text-lede` | 17px | A short orientation paragraph under a title |
+| `text-body` | 14px | Reading prose — same size as `text-sm`, more relaxed line-height |
+| `text-label` | 13px | Compact names and UI labels |
+| `text-caption` | 12px | Subordinate, qualifying text |
+
+`text-sm`, `text-xs`, and the rest of Tailwind's default scale still exist and are the
+right choice for dense UI chrome (buttons, inputs, badges) where control size — not
+content role — should drive the type size.
+
+## Spacing rhythm
+
+There's no separate spacing token scale — Tailwind's default spacing multiplier
+already covers it. Instead, pick the gap that matches the relationship:
+
+- **Within a group** (label → value, icon → text): `gap-1`–`gap-2`
+- **Inside a component** (padding, internal stacks — see `--card-spacing`): `gap-3`–`gap-4`
+- **Between sibling components or sections**: `gap-6`–`gap-8`
+- **Major page or section breaks**: `gap-12`–`gap-16`
+
+Every gap should have one clear owner. Don't stack a parent gap with competing margins
+on its children.
+
+## Color
+
+Base UI tokens (`background`, `foreground`, `card`, `border`, `muted`, ...) are
+monochrome — plain OKLCH grays in both themes. Keep it that way: reach for the neutral
+scale by default.
+
+The chroma accent palette (`--pink` through `--red`) exists for meaningful state or
+emphasis — not decoration. Don't recolor a component just because a color is available;
+use it when it communicates something the reader needs (a status, a selection, a
+result) and pair it with a non-color cue where possible.
+
+## Restraint checklist
+
+Before shipping a component or page, check:
+
+- No cards nested inside cards, and no border added just to patch weak hierarchy —
+  prefer spacing, alignment, and type first.
+- Peer elements (equivalent stats, table columns, list rows) share the same type role,
+  size, and alignment. Don't resize one because its content is longer.
+- No color without meaning — a value isn't green just because it's favorable.
+- No decorative gradients on backgrounds or text. The gradient-border treatment
+  (`gradient-border-plugin`, used by `Button` and `Card`) is this system's intentional
+  signature surface treatment, not decoration — it stays, but isn't extended to new
+  uses without reason.
+- Motion explains a state change or confirms an action; it doesn't run by default.

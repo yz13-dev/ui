@@ -2,6 +2,7 @@
 
 import { MonitorIcon, SmartphoneIcon, TabletIcon } from "lucide-react"
 
+import { ButtonGroup } from "@/registry/components/ui/button-group"
 import { ToggleGroup, ToggleGroupItem } from "@/registry/components/ui/toggle-group"
 
 export type Viewport = "desktop" | "tablet" | "mobile"
@@ -21,6 +22,8 @@ export function ViewportToggle({
 }) {
   return (
     <ToggleGroup
+      render={<ButtonGroup />}
+      className="gap-0"
       value={[value]}
       onValueChange={(next) => {
         const added = next.find((item) => item !== value)
