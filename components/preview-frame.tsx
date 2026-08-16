@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { ExternalLinkIcon } from "lucide-react"
 
 import { PREVIEW_HEIGHT_MESSAGE } from "@/components/preview-height-reporter"
 import { VIEWPORT_WIDTH, ViewportToggle, type Viewport } from "@/components/viewport-toggle"
+import { Button } from "@/registry/components/ui/button"
 
 export function PreviewFrame({
   kind,
@@ -33,6 +35,16 @@ export function PreviewFrame({
     <div className="flex flex-col overflow-hidden rounded-xl border">
       <div className="flex items-center justify-between gap-2 border-b p-2">
         <ViewportToggle value={viewport} onChange={setViewport} />
+        <Button variant="ghost" size="icon-sm" render={
+          <a
+            href={`/preview/${kind}/${slug}`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open in new tab"
+          />
+        }>
+          <ExternalLinkIcon />
+        </Button>
       </div>
       <div className="flex justify-center overflow-x-auto bg-muted/30 p-4">
         <iframe

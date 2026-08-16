@@ -4,6 +4,7 @@ import { FooterSimple } from "@/registry/blocks/footer/footer-simple"
 import { HeroCentered } from "@/registry/blocks/hero/hero-centered"
 import { NavbarSimple } from "@/registry/blocks/navbar/navbar-simple"
 import { PricingThreeTier } from "@/registry/blocks/pricing/pricing-3-tier"
+import { SaasLanding } from "@/registry/pages/landing/saas-landing"
 
 export const blockPreviews: Record<string, ComponentType> = {
   "hero-centered": HeroCentered,
@@ -12,4 +13,6 @@ export const blockPreviews: Record<string, ComponentType> = {
   "pricing-3-tier": PricingThreeTier,
 }
 
-export const pagePreviews: Record<string, ComponentType> = {}
+export const pagePreviews: Record<string, ComponentType> = {
+  "saas-landing": SaasLanding,
+}
