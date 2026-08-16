@@ -36,3 +36,10 @@ figure.shiki .fd-scroll-container::-webkit-scrollbar-track {
 figure.shiki .fd-scroll-container::-webkit-scrollbar-thumb {
   background: var(--color-fd-border);
 }
+
+/* Firefox (and other non-WebKit browsers) ignore ::-webkit-scrollbar-*, so the fix above
+   never applies there without this. */
+figure.shiki .fd-scroll-container {
+  scrollbar-color: var(--color-fd-border) var(--color-fd-card);
+  scrollbar-width: thin;
+}
