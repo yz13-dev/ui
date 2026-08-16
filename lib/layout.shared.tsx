@@ -8,6 +8,12 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: <YZ13WithTextIcon className="h-9" />,
     },
+    links: [
+      { text: 'Components', url: '/components' },
+      { text: 'Blocks', url: '/blocks' },
+      { text: 'Pages', url: '/pages' },
+      { text: 'Docs', url: '/docs' },
+    ],
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
   };
 }
