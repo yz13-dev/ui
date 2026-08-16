@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ExternalLinkIcon } from "lucide-react"
+import { useTheme } from "next-themes"
 
 import { PREVIEW_HEIGHT_MESSAGE } from "@/components/preview-height-reporter"
 import { VIEWPORT_WIDTH, ViewportToggle, type Viewport } from "@/components/viewport-toggle"
@@ -19,6 +20,8 @@ export function PreviewFrame({
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const [viewport, setViewport] = useState<Viewport>("desktop")
   const [height, setHeight] = useState(previewHeight ?? 480)
+  const { resolvedTheme } = useTheme()
+  const previewUrl = `/preview/${kind}/${slug}${resolvedTheme ? `?theme=${resolvedTheme}` : ""}`
 
   useEffect(() => {
     function onMessage(event: MessageEvent) {
@@ -37,7 +40,7 @@ export function PreviewFrame({
         <ViewportToggle value={viewport} onChange={setViewport} />
         <Button variant="ghost" size="icon-sm" render={
           <a
-            href={`/preview/${kind}/${slug}`}
+            href={previewUrl}
             target="_blank"
             rel="noreferrer"
             aria-label="Open in new tab"
@@ -49,7 +52,7 @@ export function PreviewFrame({
       <div className="flex justify-center overflow-x-auto bg-muted/30 p-4">
         <iframe
           ref={iframeRef}
-          src={`/preview/${kind}/${slug}`}
+          src={previewUrl}
           style={{ width: VIEWPORT_WIDTH[viewport], height }}
           className="max-w-full shrink-0 rounded-lg bg-background transition-[width]"
           title={`${slug} preview`}

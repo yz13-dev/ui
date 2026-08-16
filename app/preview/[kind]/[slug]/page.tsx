@@ -1,4 +1,5 @@
 import { PREVIEW_ROOT_ID, PreviewHeightReporter } from '@/components/preview-height-reporter';
+import { PreviewThemeSync } from '@/components/preview-theme-sync';
 import { getRegistryIndex } from '@/lib/registry';
 import { blockPreviews, pagePreviews } from '@/lib/preview-registry';
 import type { Metadata } from 'next';
@@ -26,10 +27,11 @@ export default async function PreviewPage(
 
   return (
     <>
-      <div id={PREVIEW_ROOT_ID}>
+      <div id={PREVIEW_ROOT_ID} className="min-h-screen bg-background text-foreground">
         <Preview />
       </div>
       <PreviewHeightReporter />
+      <PreviewThemeSync />
     </>
   );
 }

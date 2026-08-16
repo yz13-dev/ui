@@ -5,20 +5,31 @@ import {
   type RegistryKind,
   registryItemSchema,
 } from "@/lib/types"
+import { KIND_DIR } from "./registry-constants"
+
+export { KIND_DIR, KIND_LABEL } from "./registry-constants"
 
 export const REGISTRY_ROOT = path.join(process.cwd(), "registry")
-
-export const KIND_DIR: Record<RegistryKind, string> = {
-  component: "components",
-  block: "blocks",
-  page: "pages",
-}
 
 export type IndexedRegistryItem = RegistryItem & {
   /** Absolute path to the item's folder (where its meta.json and files live). */
   dir: string
   /** Absolute path to the meta.json itself. */
   metaPath: string
+}
+
+/**
+ * Display-safe projection of an item — no `dir`/`metaPath` (local filesystem paths),
+ * safe to pass across the server/client boundary (e.g. into a "use client" grid).
+ */
+export type CatalogListItem = Pick<
+  IndexedRegistryItem,
+  "kind" | "slug" | "category" | "name" | "description" | "tags" | "status"
+>
+
+export function toCatalogListItem(item: IndexedRegistryItem): CatalogListItem {
+  const { kind, slug, category, name, description, tags, status } = item
+  return { kind, slug, category, name, description, tags, status }
 }
 
 export interface RegistryIndex {

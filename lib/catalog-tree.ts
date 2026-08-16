@@ -1,13 +1,7 @@
 import type * as PageTree from "fumadocs-core/page-tree"
 
-import { KIND_DIR, getRegistryIndex } from "./registry"
+import { KIND_DIR, KIND_LABEL, getRegistryIndex } from "./registry"
 import type { RegistryKind } from "./types"
-
-const KIND_LABEL: Record<RegistryKind, string> = {
-  component: "Components",
-  block: "Blocks",
-  page: "Pages",
-}
 
 export function getCatalogTree(): PageTree.Root {
   const index = getRegistryIndex()

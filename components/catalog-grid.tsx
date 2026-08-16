@@ -1,7 +1,6 @@
-import Link from "next/link"
-
+import { CatalogFilterableGrid } from "@/components/catalog-filterable-grid"
 import { RegistryCard } from "@/components/registry-card"
-import { KIND_DIR, getRegistryIndex } from "@/lib/registry"
+import { getRegistryIndex, toCatalogListItem } from "@/lib/registry"
 import type { RegistryKind } from "@/lib/types"
 import {
   Empty,
@@ -30,11 +29,9 @@ export function CatalogGrid({
     return <ItemGrid items={items.slice().sort((a, b) => a.name.localeCompare(b.name))} />
   }
 
-  const categories = [...index.byKindAndCategory[kind].entries()].sort(([a], [b]) =>
-    a.localeCompare(b)
-  )
+  const items = index.byKind[kind]
 
-  if (categories.length === 0) {
+  if (items.length === 0) {
     return (
       <Empty>
         <EmptyHeader>
@@ -47,21 +44,7 @@ export function CatalogGrid({
     )
   }
 
-  return (
-    <div className="flex flex-col gap-12">
-      {categories.map(([category, items]) => (
-        <section key={category} className="flex flex-col gap-4">
-          <Link
-            href={`/${KIND_DIR[kind]}/${category}`}
-            className="text-heading-20 font-medium capitalize hover:underline"
-          >
-            {category}
-          </Link>
-          <ItemGrid items={items.slice().sort((a, b) => a.name.localeCompare(b.name))} />
-        </section>
-      ))}
-    </div>
-  )
+  return <CatalogFilterableGrid kind={kind} items={items.map(toCatalogListItem)} />
 }
 
 function ItemGrid({

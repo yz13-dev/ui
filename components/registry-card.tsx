@@ -1,6 +1,7 @@
 import Link from "next/link"
 
-import { KIND_DIR, type IndexedRegistryItem } from "@/lib/registry"
+import type { CatalogListItem } from "@/lib/registry"
+import { KIND_DIR } from "@/lib/registry-constants"
 import {
   Badge,
 } from "@/registry/components/ui/badge"
@@ -13,7 +14,7 @@ import {
   CardTitle,
 } from "@/registry/components/ui/card"
 
-export function RegistryCard({ item }: { item: IndexedRegistryItem }) {
+export function RegistryCard({ item }: { item: CatalogListItem }) {
   const href = `/${KIND_DIR[item.kind]}/${item.category}/${item.slug}`
 
   return (
