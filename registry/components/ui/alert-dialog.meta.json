@@ -1,0 +1,12 @@
+{
+  "name": "Alert Dialog",
+  "slug": "alert-dialog",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Interrupting modal that demands an explicit confirm or cancel action before it can be dismissed.",
+  "tags": ["dialog", "modal", "confirm", "overlay"],
+  "files": ["alert-dialog.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Alert",
+  "slug": "alert",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Inline banner for surfacing a message alongside the page content, in default or destructive tone.",
+  "tags": ["alert", "banner", "feedback", "message"],
+  "files": ["alert.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "variant",
+      "label": "Variant",
+      "type": "select",
+      "options": ["default", "destructive"],
+      "defaultValue": "default"
+    }
+  ]
+}

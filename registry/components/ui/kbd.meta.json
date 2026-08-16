@@ -1,0 +1,11 @@
+{
+  "name": "Kbd",
+  "slug": "kbd",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Renders a keyboard key or shortcut combination as a small styled key cap.",
+  "tags": ["kbd", "keyboard", "shortcut"],
+  "files": ["kbd.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

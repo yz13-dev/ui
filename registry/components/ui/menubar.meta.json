@@ -1,0 +1,12 @@
+{
+  "name": "Menubar",
+  "slug": "menubar",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Horizontal row of menu triggers, each opening its own dropdown, modeled after a desktop application menu bar.",
+  "tags": ["menubar", "menu", "navigation", "overlay"],
+  "files": ["menubar.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

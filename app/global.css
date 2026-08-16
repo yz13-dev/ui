@@ -13,3 +13,33 @@ html>body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
 }
+
+/* Home page navbar (fumadocs HomeLayout, only used on `/`) has no bottom border and isn't width-capped. */
+#nd-nav>div {
+  border-bottom: none;
+}
+
+#nd-nav>div>* {
+  max-width: none;
+}
+
+/* Code blocks (fumadocs' CodeBlock/Pre): no drop shadow, and the scrollbar should match
+   the block's own background instead of showing through to whatever is behind it. */
+figure.shiki {
+  box-shadow: none;
+}
+
+figure.shiki .fd-scroll-container::-webkit-scrollbar-track {
+  background: var(--color-fd-card);
+}
+
+figure.shiki .fd-scroll-container::-webkit-scrollbar-thumb {
+  background: var(--color-fd-border);
+}
+
+/* Firefox (and other non-WebKit browsers) ignore ::-webkit-scrollbar-*, so the fix above
+   never applies there without this. */
+figure.shiki .fd-scroll-container {
+  scrollbar-color: var(--color-fd-border) var(--color-fd-card);
+  scrollbar-width: thin;
+}

@@ -1,6 +1,6 @@
 import { PlusIcon } from "@/components/icons"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/registry/components/ui/button"
+import { Card, CardContent } from "@/registry/components/ui/card"
 import {
   Empty,
   EmptyContent,
@@ -8,7 +8,7 @@ import {
   EmptyHeader,
   EmptyMedia,
   EmptyTitle,
-} from "@/components/ui/empty"
+} from "@/registry/components/ui/empty"
 
 export function EmptyDistributeTrack() {
   return (

@@ -1,0 +1,12 @@
+{
+  "name": "Popover",
+  "slug": "popover",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Floating panel anchored to a trigger element, used for contextual controls that don't need a full modal.",
+  "tags": ["popover", "overlay", "anchor", "floating"],
+  "files": ["popover.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

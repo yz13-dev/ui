@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardContent,
@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@/registry/components/ui/card"
+import { Field, FieldGroup, FieldLabel } from "@/registry/components/ui/field"
+import { Input } from "@/registry/components/ui/input"
 
 export function NewMilestone() {
   return (

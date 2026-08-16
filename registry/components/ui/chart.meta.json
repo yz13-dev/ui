@@ -1,0 +1,12 @@
+{
+  "name": "Chart",
+  "slug": "chart",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Themeable chart container and tooltip wrapper built on Recharts, mapping data series to design tokens.",
+  "tags": ["chart", "graph", "data", "recharts"],
+  "files": ["chart.tsx"],
+  "dependencies": ["recharts"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

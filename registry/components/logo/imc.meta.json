@@ -1,0 +1,11 @@
+{
+  "name": "IMC Logo",
+  "slug": "imc",
+  "kind": "component",
+  "category": "logo",
+  "description": "Inline SVG wordmark/icon for the IMC brand.",
+  "tags": ["logo", "brand", "svg", "icon"],
+  "files": ["imc.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

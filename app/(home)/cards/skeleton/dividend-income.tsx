@@ -3,8 +3,8 @@ import {
   CardAction,
   CardContent,
   CardHeader,
-} from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+} from "@/registry/components/ui/card"
+import { Skeleton } from "@/registry/components/ui/skeleton"
 
 const rows = [0, 1, 2, 3]
 const miniBars = [40, 60, 80, 50]

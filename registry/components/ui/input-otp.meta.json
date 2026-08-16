@@ -1,0 +1,12 @@
+{
+  "name": "Input OTP",
+  "slug": "input-otp",
+  "kind": "component",
+  "category": "forms",
+  "description": "One-time-password input rendered as a sequence of single-character boxes with a caret and paste support.",
+  "tags": ["otp", "input", "verification", "form"],
+  "files": ["input-otp.tsx"],
+  "dependencies": ["input-otp"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

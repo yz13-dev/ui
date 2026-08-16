@@ -1,5 +1,5 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Card, CardContent, CardHeader } from "@/registry/components/ui/card"
+import { Skeleton } from "@/registry/components/ui/skeleton"
 
 const rows = [0, 1, 2]
 

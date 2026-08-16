@@ -1,4 +1,5 @@
 'use client';
+import { useState } from 'react';
 import {
   SearchDialog,
   SearchDialogClose,
@@ -24,14 +25,38 @@ function initOrama() {
 
 export default function DefaultSearchDialog(props: SharedProps) {
   const { locale } = useI18n(); // (optional) for i18n
-  const { search, setSearch, query } = useDocsSearch({
+  const [search, setSearch] = useState('');
+
+  const registry = useDocsSearch({
+    type: 'static',
+    from: '/api/registry-search',
+    initOrama,
+    locale,
+  });
+  const docs = useDocsSearch({
     type: 'static',
     initOrama,
     locale,
   });
 
+  function onSearchChange(value: string) {
+    setSearch(value);
+    registry.setSearch(value);
+    docs.setSearch(value);
+  }
+
+  const items = [
+    ...(registry.query.data !== 'empty' ? (registry.query.data ?? []) : []),
+    ...(docs.query.data !== 'empty' ? (docs.query.data ?? []) : []),
+  ];
+
   return (
-    <SearchDialog search={search} onSearchChange={setSearch} isLoading={query.isLoading} {...props}>
+    <SearchDialog
+      search={search}
+      onSearchChange={onSearchChange}
+      isLoading={registry.query.isLoading || docs.query.isLoading}
+      {...props}
+    >
       <SearchDialogOverlay />
       <SearchDialogContent>
         <SearchDialogHeader>
@@ -39,7 +64,7 @@ export default function DefaultSearchDialog(props: SharedProps) {
           <SearchDialogInput />
           <SearchDialogClose />
         </SearchDialogHeader>
-        <SearchDialogList items={query.data !== 'empty' ? query.data : null} />
+        <SearchDialogList items={items.length > 0 ? items : null} />
       </SearchDialogContent>
     </SearchDialog>
   );

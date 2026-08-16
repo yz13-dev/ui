@@ -1,0 +1,12 @@
+{
+  "name": "Sonner",
+  "slug": "sonner",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Toast notification stack, theme-aware and positioned above the page for transient status messages.",
+  "tags": ["toast", "notification", "feedback"],
+  "files": ["sonner.tsx"],
+  "dependencies": ["sonner"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

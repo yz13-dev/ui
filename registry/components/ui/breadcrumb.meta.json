@@ -1,0 +1,12 @@
+{
+  "name": "Breadcrumb",
+  "slug": "breadcrumb",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Trail of links showing the current page's position within a hierarchy, with a separator and collapsible ellipsis.",
+  "tags": ["breadcrumb", "navigation", "hierarchy"],
+  "files": ["breadcrumb.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

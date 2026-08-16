@@ -1,0 +1,12 @@
+{
+  "name": "SaaS Landing",
+  "slug": "saas-landing",
+  "kind": "page",
+  "category": "landing",
+  "description": "Full landing page for a SaaS product: navbar, hero, pricing and footer.",
+  "tags": ["landing", "marketing", "saas"],
+  "files": ["saas-landing.tsx"],
+  "registryDependencies": ["navbar-simple", "hero-centered", "pricing-3-tier", "footer-simple"],
+  "status": "stable",
+  "createdAt": "2026-08-16"
+}

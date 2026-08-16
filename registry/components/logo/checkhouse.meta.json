@@ -1,0 +1,11 @@
+{
+  "name": "Checkhouse Logo",
+  "slug": "checkhouse",
+  "kind": "component",
+  "category": "logo",
+  "description": "Inline SVG wordmark/icon for the Checkhouse brand.",
+  "tags": ["logo", "brand", "svg", "icon"],
+  "files": ["checkhouse.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

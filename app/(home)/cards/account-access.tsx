@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardContent,
@@ -6,18 +6,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
+} from "@/registry/components/ui/card"
+import { Field, FieldGroup, FieldLabel } from "@/registry/components/ui/field"
 
 import { AlertCircleIcon, ArrowRightIcon, LockIcon } from "@/components/icons"
-import { Input } from "@/components/ui/input"
+import { Input } from "@/registry/components/ui/input"
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemMedia,
   ItemTitle,
-} from "@/components/ui/item"
+} from "@/registry/components/ui/item"
 
 export function AccountAccess() {
   return (

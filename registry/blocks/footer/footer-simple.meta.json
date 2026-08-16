@@ -1,0 +1,13 @@
+{
+  "name": "Footer Simple",
+  "slug": "footer-simple",
+  "kind": "block",
+  "category": "footer",
+  "description": "Footer with a logo, link columns and a copyright row.",
+  "tags": ["footer", "navigation"],
+  "files": ["footer-simple.tsx"],
+  "registryDependencies": ["separator", "yz13"],
+  "status": "stable",
+  "createdAt": "2026-08-16",
+  "previewHeight": 320
+}

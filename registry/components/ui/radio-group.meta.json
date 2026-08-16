@@ -1,0 +1,12 @@
+{
+  "name": "Radio Group",
+  "slug": "radio-group",
+  "kind": "component",
+  "category": "forms",
+  "description": "A set of mutually exclusive radio items where only one can be selected at a time.",
+  "tags": ["radio", "form", "selection"],
+  "files": ["radio-group.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

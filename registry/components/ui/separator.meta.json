@@ -1,0 +1,21 @@
+{
+  "name": "Separator",
+  "slug": "separator",
+  "kind": "component",
+  "category": "layout",
+  "description": "Thin horizontal or vertical rule for dividing content into distinct sections.",
+  "tags": ["separator", "divider", "layout"],
+  "files": ["separator.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "orientation",
+      "label": "Orientation",
+      "type": "select",
+      "options": ["horizontal", "vertical"],
+      "defaultValue": "horizontal"
+    }
+  ]
+}

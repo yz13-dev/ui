@@ -1,0 +1,15 @@
+{
+  "name": "Select",
+  "slug": "select",
+  "kind": "component",
+  "category": "forms",
+  "description": "Custom dropdown picker with a trigger, popup listbox, grouped options and keyboard navigation.",
+  "tags": ["select", "dropdown", "form", "listbox"],
+  "files": ["select.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
+  ]
+}

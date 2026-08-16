@@ -1,0 +1,12 @@
+{
+  "name": "Calendar",
+  "slug": "calendar",
+  "kind": "component",
+  "category": "forms",
+  "description": "Date picker grid supporting single, multiple and range selection, month navigation and disabled dates.",
+  "tags": ["calendar", "date", "picker", "form"],
+  "files": ["calendar.tsx"],
+  "dependencies": ["react-day-picker"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

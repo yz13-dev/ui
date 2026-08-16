@@ -1,0 +1,21 @@
+{
+  "name": "Sheet",
+  "slug": "sheet",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Panel that slides in from a screen edge over the page content, for supplementary content or forms.",
+  "tags": ["sheet", "panel", "overlay", "modal"],
+  "files": ["sheet.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "side",
+      "label": "Side",
+      "type": "select",
+      "options": ["top", "right", "bottom", "left"],
+      "defaultValue": "right"
+    }
+  ]
+}

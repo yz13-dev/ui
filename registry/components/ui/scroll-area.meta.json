@@ -1,0 +1,12 @@
+{
+  "name": "Scroll Area",
+  "slug": "scroll-area",
+  "kind": "component",
+  "category": "layout",
+  "description": "Custom-styled scrollable viewport with themeable scrollbars, replacing native browser scrollbars.",
+  "tags": ["scroll", "layout", "viewport"],
+  "files": ["scroll-area.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

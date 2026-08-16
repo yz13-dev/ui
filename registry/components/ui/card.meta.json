@@ -1,0 +1,20 @@
+{
+  "name": "Card",
+  "slug": "card",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Container with header, title, description, action, content and footer slots for grouping related content.",
+  "tags": ["card", "container", "layout"],
+  "files": ["card.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "size",
+      "label": "Size",
+      "type": "select",
+      "options": ["default", "sm"],
+      "defaultValue": "default"
+    }
+  ]
+}

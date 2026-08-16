@@ -1,0 +1,28 @@
+{
+  "name": "Toggle",
+  "slug": "toggle",
+  "kind": "component",
+  "category": "buttons",
+  "description": "Two-state button that can be pressed or unpressed, used for switches like bold/italic in a toolbar.",
+  "tags": ["toggle", "button", "pressed", "toolbar"],
+  "files": ["toggle.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "variant",
+      "label": "Variant",
+      "type": "select",
+      "options": ["default", "outline"],
+      "defaultValue": "default"
+    },
+    {
+      "prop": "size",
+      "label": "Size",
+      "type": "select",
+      "options": ["sm", "default", "lg"],
+      "defaultValue": "default"
+    }
+  ]
+}

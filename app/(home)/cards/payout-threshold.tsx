@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardAction,
@@ -8,14 +8,14 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/registry/components/ui/card"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Progress } from "@/components/ui/progress"
+} from "@/registry/components/ui/field"
+import { Progress } from "@/registry/components/ui/progress"
 import {
   Select,
   SelectContent,
@@ -23,8 +23,8 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/registry/components/ui/select"
+import { Textarea } from "@/registry/components/ui/textarea"
 import { XIcon } from "lucide-react"
 
 const CURRENCIES = [

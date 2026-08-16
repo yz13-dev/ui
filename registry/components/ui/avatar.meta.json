@@ -1,0 +1,12 @@
+{
+  "name": "Avatar",
+  "slug": "avatar",
+  "kind": "component",
+  "category": "data-display",
+  "description": "User image with an automatic fallback to initials or an icon when the image fails to load.",
+  "tags": ["avatar", "user", "image", "profile"],
+  "files": ["avatar.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

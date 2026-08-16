@@ -1,0 +1,11 @@
+{
+  "name": "YZ13 Logo",
+  "slug": "yz13",
+  "kind": "component",
+  "category": "logo",
+  "description": "Inline SVG wordmark/icon for the YZ13 brand.",
+  "tags": ["logo", "brand", "svg", "icon"],
+  "files": ["yz13.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

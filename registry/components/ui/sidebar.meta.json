@@ -1,0 +1,12 @@
+{
+  "name": "Sidebar",
+  "slug": "sidebar",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Collapsible application sidebar with grouped menus, icons, a mobile sheet fallback and persisted open state.",
+  "tags": ["sidebar", "navigation", "layout", "app shell"],
+  "files": ["sidebar.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

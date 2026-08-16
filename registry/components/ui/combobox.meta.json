@@ -1,0 +1,12 @@
+{
+  "name": "Combobox",
+  "slug": "combobox",
+  "kind": "component",
+  "category": "forms",
+  "description": "Searchable select built from a popover and command list, letting users filter and pick an option by typing.",
+  "tags": ["combobox", "select", "search", "form", "autocomplete"],
+  "files": ["combobox.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

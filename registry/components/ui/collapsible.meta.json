@@ -1,0 +1,12 @@
+{
+  "name": "Collapsible",
+  "slug": "collapsible",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Single expand/collapse region toggled by a trigger, the building block behind Accordion.",
+  "tags": ["collapsible", "collapse", "disclosure"],
+  "files": ["collapsible.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

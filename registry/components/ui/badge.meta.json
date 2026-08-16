@@ -1,0 +1,21 @@
+{
+  "name": "Badge",
+  "slug": "badge",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Small label for tags, statuses or counts, in default, secondary, destructive and outline styles.",
+  "tags": ["badge", "tag", "status", "label"],
+  "files": ["badge.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15",
+  "variants": [
+    {
+      "prop": "variant",
+      "label": "Variant",
+      "type": "select",
+      "options": ["default", "secondary", "destructive", "outline"],
+      "defaultValue": "default"
+    }
+  ]
+}

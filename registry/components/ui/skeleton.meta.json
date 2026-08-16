@@ -1,0 +1,11 @@
+{
+  "name": "Skeleton",
+  "slug": "skeleton",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Pulsing placeholder block that stands in for content while it's loading.",
+  "tags": ["skeleton", "loading", "placeholder", "feedback"],
+  "files": ["skeleton.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

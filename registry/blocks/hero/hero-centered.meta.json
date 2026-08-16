@@ -1,0 +1,13 @@
+{
+  "name": "Hero Centered",
+  "slug": "hero-centered",
+  "kind": "block",
+  "category": "hero",
+  "description": "Centered hero section with an announcement badge, heading, lede and two call-to-action buttons.",
+  "tags": ["hero", "landing", "marketing"],
+  "files": ["hero-centered.tsx"],
+  "registryDependencies": ["button", "badge"],
+  "status": "stable",
+  "createdAt": "2026-08-16",
+  "previewHeight": 480
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Dropdown Menu",
+  "slug": "dropdown-menu",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Trigger-anchored menu of actions, checkboxes, radio groups and nested submenus.",
+  "tags": ["dropdown", "menu", "overlay"],
+  "files": ["dropdown-menu.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

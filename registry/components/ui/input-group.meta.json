@@ -1,0 +1,11 @@
+{
+  "name": "Input Group",
+  "slug": "input-group",
+  "kind": "component",
+  "category": "forms",
+  "description": "Composes an input with adjacent addons, icons or buttons into a single bordered control.",
+  "tags": ["input", "addon", "form", "field"],
+  "files": ["input-group.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

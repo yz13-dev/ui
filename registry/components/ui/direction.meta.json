@@ -1,0 +1,12 @@
+{
+  "name": "Direction Provider",
+  "slug": "direction",
+  "kind": "component",
+  "category": "layout",
+  "description": "Context provider that propagates reading direction (LTR/RTL) to base-ui primitives that support it.",
+  "tags": ["direction", "rtl", "ltr", "layout", "i18n"],
+  "files": ["direction.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

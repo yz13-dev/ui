@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/registry/components/ui/badge"
 import {
   Card,
   CardContent,
@@ -6,9 +6,9 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Item, ItemContent } from "@/components/ui/item"
-import { Separator } from "@/components/ui/separator"
+} from "@/registry/components/ui/card"
+import { Item, ItemContent } from "@/registry/components/ui/item"
+import { Separator } from "@/registry/components/ui/separator"
 
 const netRoyalties = 1248.75
 const processingFee = 37.46

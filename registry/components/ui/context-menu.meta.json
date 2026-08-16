@@ -1,0 +1,12 @@
+{
+  "name": "Context Menu",
+  "slug": "context-menu",
+  "kind": "component",
+  "category": "overlays",
+  "description": "Right-click menu with items, checkboxes, radio groups and submenus anchored to the cursor position.",
+  "tags": ["context menu", "right click", "overlay", "menu"],
+  "files": ["context-menu.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

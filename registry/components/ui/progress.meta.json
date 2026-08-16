@@ -1,0 +1,12 @@
+{
+  "name": "Progress",
+  "slug": "progress",
+  "kind": "component",
+  "category": "feedback",
+  "description": "Horizontal bar showing completion percentage of a task or operation.",
+  "tags": ["progress", "loading", "feedback"],
+  "files": ["progress.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

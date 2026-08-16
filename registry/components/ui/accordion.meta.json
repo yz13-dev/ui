@@ -1,0 +1,12 @@
+{
+  "name": "Accordion",
+  "slug": "accordion",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Vertically stacked set of expandable sections, single or multiple open at a time.",
+  "tags": ["accordion", "collapse", "disclosure"],
+  "files": ["accordion.tsx"],
+  "dependencies": ["@base-ui/react"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

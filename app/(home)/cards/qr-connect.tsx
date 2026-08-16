@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/registry/components/ui/card"
 
 const qrCells = [
   "111111100101101111111",

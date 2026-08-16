@@ -1,0 +1,11 @@
+{
+  "name": "Pagination",
+  "slug": "pagination",
+  "kind": "component",
+  "category": "navigation",
+  "description": "Page-number navigation with previous/next controls and an ellipsis for collapsing long ranges.",
+  "tags": ["pagination", "navigation", "pages"],
+  "files": ["pagination.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

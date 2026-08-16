@@ -1,0 +1,12 @@
+{
+  "name": "Resizable",
+  "slug": "resizable",
+  "kind": "component",
+  "category": "layout",
+  "description": "Draggable-handle panel group for split-pane layouts, horizontal or vertical.",
+  "tags": ["resizable", "panels", "layout", "split"],
+  "files": ["resizable.tsx"],
+  "dependencies": ["react-resizable-panels"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

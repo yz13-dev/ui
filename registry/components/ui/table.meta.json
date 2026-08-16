@@ -1,0 +1,11 @@
+{
+  "name": "Table",
+  "slug": "table",
+  "kind": "component",
+  "category": "data-display",
+  "description": "Styled table primitives — header, body, row, cell, caption and footer — for tabular data.",
+  "tags": ["table", "data", "grid"],
+  "files": ["table.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}

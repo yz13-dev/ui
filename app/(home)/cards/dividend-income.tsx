@@ -1,6 +1,6 @@
 
 import { XIcon } from "@/components/icons"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/registry/components/ui/button"
 import {
   Card,
   CardAction,
@@ -8,14 +8,14 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/registry/components/ui/card"
 import {
   Item,
   ItemContent,
   ItemDescription,
   ItemGroup,
   ItemTitle,
-} from "@/components/ui/item"
+} from "@/registry/components/ui/item"
 
 
 const HOLDINGS = [

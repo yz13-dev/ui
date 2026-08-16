@@ -1,0 +1,11 @@
+{
+  "name": "HostkitJS Logo",
+  "slug": "hostkitjs",
+  "kind": "component",
+  "category": "logo",
+  "description": "Inline SVG wordmark/icon for the HostkitJS brand.",
+  "tags": ["logo", "brand", "svg", "icon"],
+  "files": ["hostkitjs.tsx"],
+  "status": "stable",
+  "createdAt": "2026-08-15"
+}
