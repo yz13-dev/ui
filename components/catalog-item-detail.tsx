@@ -1,6 +1,10 @@
 import Link from "next/link"
+import { ServerCodeBlock } from "fumadocs-ui/components/codeblock.rsc"
 
+import { ComponentPreview } from "@/components/component-preview"
+import { CopyButton } from "@/components/copy-button"
 import { KIND_DIR, getRegistryIndex, type IndexedRegistryItem } from "@/lib/registry"
+import { getItemSource } from "@/lib/registry-source"
 import type { RegistryKind } from "@/lib/types"
 import { Badge } from "@/registry/components/ui/badge"
 
@@ -9,15 +13,21 @@ const REQUIRES_KIND: Partial<Record<RegistryKind, RegistryKind>> = {
   page: "block",
 }
 
-export function CatalogItemDetail({ item }: { item: IndexedRegistryItem }) {
+export async function CatalogItemDetail({ item }: { item: IndexedRegistryItem }) {
   const requiresKind = REQUIRES_KIND[item.kind]
   const registryDependencies =
     "registryDependencies" in item ? item.registryDependencies : []
 
   const index = getRegistryIndex()
+  const source = getItemSource(item)
+  const installCommand = item.dependencies?.length
+    ? `npm i ${item.dependencies.join(" ")}`
+    : null
 
   return (
     <div className="flex flex-col gap-8">
+      {item.kind === "component" ? <ComponentPreview item={item} /> : null}
+
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="outline" className="capitalize">
@@ -67,6 +77,16 @@ export function CatalogItemDetail({ item }: { item: IndexedRegistryItem }) {
         </div>
       ) : null}
 
+      {installCommand ? (
+        <div className="flex flex-col gap-2">
+          <h2 className="text-heading-16 font-medium">Install</h2>
+          <div className="flex items-center justify-between gap-2 rounded-lg border bg-muted/30 py-2 pr-2 pl-3">
+            <code className="text-label">{installCommand}</code>
+            <CopyButton text={installCommand} />
+          </div>
+        </div>
+      ) : null}
+
       {requiresKind && registryDependencies.length > 0 ? (
         <div className="flex flex-col gap-2">
           <h2 className="text-heading-16 font-medium">Requires</h2>
@@ -91,6 +111,20 @@ export function CatalogItemDetail({ item }: { item: IndexedRegistryItem }) {
           </ul>
         </div>
       ) : null}
+
+      <div className="flex flex-col gap-2">
+        <h2 className="text-heading-16 font-medium">Code</h2>
+        <div className="flex flex-col gap-4">
+          {source.map(({ file, code }) => (
+            <ServerCodeBlock
+              key={file}
+              code={code}
+              lang="tsx"
+              codeblock={{ title: file }}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

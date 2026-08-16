@@ -2,7 +2,6 @@ import { YZ13WithTextIcon } from '@/registry/components/logo/yz13';
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import { gitConfig } from './shared';
 
-
 export function baseOptions(): BaseLayoutProps {
   return {
     nav: {

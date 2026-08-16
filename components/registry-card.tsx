@@ -31,9 +31,9 @@ export function RegistryCard({ item }: { item: IndexedRegistryItem }) {
           <CardDescription>{item.description}</CardDescription>
         </CardHeader>
         {item.tags.length > 0 ? (
-          <CardContent className="flex flex-wrap gap-1.5">
+          <CardContent className="flex flex-wrap mt-auto gap-1.5">
             {item.tags.map((tag) => (
-              <Badge key={tag} variant="outline">
+              <Badge key={tag} variant="outline" className="capitalize">
                 {tag}
               </Badge>
             ))}
