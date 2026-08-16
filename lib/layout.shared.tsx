@@ -7,6 +7,9 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: <YZ13WithTextIcon className="h-9" />,
     },
+    themeSwitch: {
+      mode: 'light-dark-system',
+    },
     links: [
       { text: 'Components', url: '/components' },
       { text: 'Blocks', url: '/blocks' },

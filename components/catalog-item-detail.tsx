@@ -1,5 +1,5 @@
-import Link from "next/link"
 import { ServerCodeBlock } from "fumadocs-ui/components/codeblock.rsc"
+import Link from "next/link"
 
 import { ComponentPreview } from "@/components/component-preview"
 import { CopyButton } from "@/components/copy-button"

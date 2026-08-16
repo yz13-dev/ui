@@ -4,10 +4,10 @@ import { useMemo, useState } from "react"
 import Link from "next/link"
 
 import { RegistryCard } from "@/components/registry-card"
+import { TagFilter } from "@/components/tag-filter"
 import type { CatalogListItem } from "@/lib/registry"
 import { KIND_DIR } from "@/lib/registry-constants"
 import type { RegistryKind } from "@/lib/types"
-import { Badge } from "@/registry/components/ui/badge"
 
 export function CatalogFilterableGrid({
   kind,
@@ -16,7 +16,7 @@ export function CatalogFilterableGrid({
   kind: RegistryKind
   items: CatalogListItem[]
 }) {
-  const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set())
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
 
   const tags = useMemo(
     () => [...new Set(items.flatMap((item) => item.tags))].sort((a, b) => a.localeCompare(b)),
@@ -24,8 +24,8 @@ export function CatalogFilterableGrid({
   )
 
   const filtered =
-    selectedTags.size > 0
-      ? items.filter((item) => item.tags.some((tag) => selectedTags.has(tag)))
+    selectedTags.length > 0
+      ? items.filter((item) => item.tags.some((tag) => selectedTags.includes(tag)))
       : items
 
   const categories = useMemo(() => {
@@ -43,30 +43,10 @@ export function CatalogFilterableGrid({
       )
   }, [filtered])
 
-  function toggleTag(tag: string) {
-    setSelectedTags((current) => {
-      const next = new Set(current)
-      if (next.has(tag)) next.delete(tag)
-      else next.add(tag)
-      return next
-    })
-  }
-
   return (
     <div className="flex flex-col gap-8">
       {tags.length > 0 ? (
-        <div className="flex flex-wrap gap-1.5">
-          {tags.map((tag) => (
-            <button key={tag} type="button" onClick={() => toggleTag(tag)}>
-              <Badge
-                variant={selectedTags.has(tag) ? "default" : "outline"}
-                className="cursor-pointer capitalize"
-              >
-                {tag}
-              </Badge>
-            </button>
-          ))}
-        </div>
+        <TagFilter tags={tags} value={selectedTags} onChange={setSelectedTags} />
       ) : null}
 
       {categories.length === 0 ? (
