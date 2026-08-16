@@ -1,0 +1,48 @@
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+
+import { PREVIEW_HEIGHT_MESSAGE } from "@/components/preview-height-reporter"
+import { VIEWPORT_WIDTH, ViewportToggle, type Viewport } from "@/components/viewport-toggle"
+
+export function PreviewFrame({
+  kind,
+  slug,
+  previewHeight,
+}: {
+  kind: "block" | "page"
+  slug: string
+  previewHeight?: number
+}) {
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+  const [viewport, setViewport] = useState<Viewport>("desktop")
+  const [height, setHeight] = useState(previewHeight ?? 480)
+
+  useEffect(() => {
+    function onMessage(event: MessageEvent) {
+      if (event.source !== iframeRef.current?.contentWindow) return
+      if (event.data?.type !== PREVIEW_HEIGHT_MESSAGE) return
+      setHeight(event.data.height)
+    }
+
+    window.addEventListener("message", onMessage)
+    return () => window.removeEventListener("message", onMessage)
+  }, [])
+
+  return (
+    <div className="flex flex-col overflow-hidden rounded-xl border">
+      <div className="flex items-center justify-between gap-2 border-b p-2">
+        <ViewportToggle value={viewport} onChange={setViewport} />
+      </div>
+      <div className="flex justify-center overflow-x-auto bg-muted/30 p-4">
+        <iframe
+          ref={iframeRef}
+          src={`/preview/${kind}/${slug}`}
+          style={{ width: VIEWPORT_WIDTH[viewport], height }}
+          className="max-w-full shrink-0 rounded-lg bg-background transition-[width]"
+          title={`${slug} preview`}
+        />
+      </div>
+    </div>
+  )
+}

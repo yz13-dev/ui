@@ -1,0 +1,13 @@
+{
+  "name": "Navbar Simple",
+  "slug": "navbar-simple",
+  "kind": "block",
+  "category": "navbar",
+  "description": "Full-width navigation bar with a logo, nav links and a call-to-action button.",
+  "tags": ["navbar", "navigation", "header"],
+  "files": ["navbar-simple.tsx"],
+  "registryDependencies": ["button", "yz13"],
+  "status": "stable",
+  "createdAt": "2026-08-16",
+  "previewHeight": 96
+}

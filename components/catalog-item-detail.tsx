@@ -3,6 +3,7 @@ import { ServerCodeBlock } from "fumadocs-ui/components/codeblock.rsc"
 
 import { ComponentPreview } from "@/components/component-preview"
 import { CopyButton } from "@/components/copy-button"
+import { PreviewFrame } from "@/components/preview-frame"
 import { KIND_DIR, getRegistryIndex, type IndexedRegistryItem } from "@/lib/registry"
 import { getItemSource } from "@/lib/registry-source"
 import type { RegistryKind } from "@/lib/types"
@@ -27,6 +28,13 @@ export async function CatalogItemDetail({ item }: { item: IndexedRegistryItem })
   return (
     <div className="flex flex-col gap-8">
       {item.kind === "component" ? <ComponentPreview item={item} /> : null}
+      {item.kind !== "component" ? (
+        <PreviewFrame
+          kind={item.kind}
+          slug={item.slug}
+          previewHeight={item.kind === "block" ? item.previewHeight : undefined}
+        />
+      ) : null}
 
       <div className="flex flex-col gap-3">
         <div className="flex flex-wrap items-center gap-2">

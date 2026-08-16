@@ -1,0 +1,13 @@
+{
+  "name": "Pricing 3 Tier",
+  "slug": "pricing-3-tier",
+  "kind": "block",
+  "category": "pricing",
+  "description": "Three-tier pricing section with feature lists and a highlighted middle plan.",
+  "tags": ["pricing", "marketing", "cta"],
+  "files": ["pricing-3-tier.tsx"],
+  "registryDependencies": ["card", "button", "badge"],
+  "status": "stable",
+  "createdAt": "2026-08-16",
+  "previewHeight": 640
+}
