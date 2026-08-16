@@ -6,6 +6,10 @@ const withMDX = createMDX();
 const config: NextConfig = {
   output: 'export',
   reactStrictMode: true,
+  devIndicators: false,
+  experimental: {
+    useTypeScriptCli: true,
+  },
 };
 
 export default withMDX(config);
