@@ -78,7 +78,7 @@ function loadKind(kind: RegistryKind): IndexedRegistryItem[] {
 let cachedIndex: RegistryIndex | null = null
 
 export function getRegistryIndex(): RegistryIndex {
-  if (cachedIndex) return cachedIndex
+  if (process.env.NODE_ENV === "production" && cachedIndex) return cachedIndex
 
   const byKind: Record<RegistryKind, IndexedRegistryItem[]> = {
     component: loadKind("component"),
@@ -114,6 +114,9 @@ export function getRegistryIndex(): RegistryIndex {
     }
   }
 
-  cachedIndex = { all, byKind, byKindAndSlug, byKindAndCategory }
-  return cachedIndex
+  const index = { all, byKind, byKindAndSlug, byKindAndCategory }
+
+  if (process.env.NODE_ENV === "production") cachedIndex = index
+
+  return index
 }

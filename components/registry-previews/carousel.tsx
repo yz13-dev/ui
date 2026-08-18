@@ -17,7 +17,7 @@ export function Preview({ values }: { values: VariantValues }) {
       <CarouselContent className={orientation === "vertical" ? "h-48" : undefined}>
         {[1, 2, 3].map((slide) => (
           <CarouselItem key={slide}>
-            <div className="flex h-32 items-center justify-center rounded-lg border text-heading-20 font-medium text-muted-foreground">
+            <div className="flex h-32 items-center justify-center rounded-lg border text-heading-20 font-medium text-tertiary">
               {slide}
             </div>
           </CarouselItem>

@@ -29,7 +29,7 @@ export function RegistryListItem({ item }: { item: CatalogListItem }) {
           <ArrowRightIcon className="size-4" />
         </ItemActions>
         {item.status && item.status !== "stable" ? (
-          <Badge variant={item.status === "deprecated" ? "destructive" : "outline"}>
+          <Badge variant={item.status === "deprecated" ? "error" : "outline"}>
             {item.status}
           </Badge>
         ) : null}

@@ -1,17 +1,22 @@
-"use client"
+"use client";
 
+import type { VariantValues } from "@/components/variant-controls";
 import {
   Combobox,
   ComboboxContent,
   ComboboxInput,
   ComboboxItem,
   ComboboxList,
-} from "@/registry/components/ui/combobox"
+} from "@/registry/components/ui/combobox";
 
-export function Preview() {
+export function Preview({ values }: { values: VariantValues }) {
   return (
     <Combobox>
-      <ComboboxInput placeholder="Search fruit..." />
+      <ComboboxInput
+        placeholder="Search fruit..."
+        size={values.size as "xs" | "sm" | "default" | "lg"}
+        disabled={Boolean(values.disabled)}
+      />
       <ComboboxContent>
         <ComboboxList>
           <ComboboxItem value="apple">Apple</ComboboxItem>
@@ -20,5 +25,5 @@ export function Preview() {
         </ComboboxList>
       </ComboboxContent>
     </Combobox>
-  )
+  );
 }

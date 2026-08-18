@@ -22,7 +22,7 @@ function FooterSimple() {
       <div className="flex flex-wrap justify-between gap-8">
         <div className="flex flex-col gap-2">
           <YZ13Icon className="h-6 w-auto" />
-          <p className="max-w-56 text-caption text-muted-foreground">
+          <p className="max-w-56 text-caption text-tertiary">
             A monochrome, typography-driven component registry.
           </p>
         </div>
@@ -35,7 +35,7 @@ function FooterSimple() {
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-label text-muted-foreground hover:text-foreground"
+                      className="text-label text-tertiary hover:text-primary"
                     >
                       {link}
                     </a>
@@ -47,7 +47,7 @@ function FooterSimple() {
         </div>
       </div>
       <Separator />
-      <p className="text-caption text-muted-foreground">
+      <p className="text-caption text-tertiary">
         © {new Date().getFullYear()} YZ13. All rights reserved.
       </p>
     </footer>

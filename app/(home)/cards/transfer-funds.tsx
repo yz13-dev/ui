@@ -107,14 +107,14 @@ export function TransferFunds() {
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-tertiary">
                   Estimated arrival
                 </span>
                 <span className="text-sm font-medium">Today, Apr 14</span>
               </div>
               <Separator />
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-tertiary">
                   Transaction fee
                 </span>
                 <span className="text-sm font-medium tabular-nums">$0.00</span>

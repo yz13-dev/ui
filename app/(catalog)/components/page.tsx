@@ -11,7 +11,7 @@ export default function ComponentsPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
         <h1 className="text-title font-medium">Components</h1>
-        <p className="text-lede text-muted-foreground">
+        <p className="text-lede text-tertiary">
           Atomic building blocks of the design system.
         </p>
       </div>

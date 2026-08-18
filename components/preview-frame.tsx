@@ -53,7 +53,7 @@ export function PreviewFrame({
           ref={iframeRef}
           src={previewUrl}
           style={{ width: VIEWPORT_WIDTH[viewport], height }}
-          className="max-w-full shrink-0 rounded-lg border bg-background transition-[width]"
+          className="max-w-full shrink-0 rounded-lg border bg-canvas transition-[width]"
           title={`${slug} preview`}
         />
       </div>

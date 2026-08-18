@@ -34,7 +34,7 @@ export function SavingsTargets() {
             className="flex-col items-stretch"
           >
             <ItemContent className="gap-3">
-              <ItemDescription className="cn-font-heading text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              <ItemDescription className="cn-font-heading text-xs font-medium tracking-wider text-tertiary uppercase">
                 Retirement
               </ItemDescription>
               <span className="text-3xl font-semibold tabular-nums">
@@ -43,7 +43,7 @@ export function SavingsTargets() {
               <Progress value={65} aria-label="Retirement savings progress" />
             </ItemContent>
             <ItemFooter>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-tertiary">
                 65% achieved
               </span>
               <span className="text-sm font-medium tabular-nums">$273,000</span>
@@ -55,7 +55,7 @@ export function SavingsTargets() {
             className="flex-col items-stretch"
           >
             <ItemContent className="gap-3">
-              <ItemDescription className="cn-font-heading text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              <ItemDescription className="cn-font-heading text-xs font-medium tracking-wider text-tertiary uppercase">
                 Real Estate
               </ItemDescription>
               <span className="text-3xl font-semibold tabular-nums">
@@ -64,7 +64,7 @@ export function SavingsTargets() {
               <Progress value={32} aria-label="Real estate savings progress" />
             </ItemContent>
             <ItemFooter>
-              <span className="text-sm text-muted-foreground">
+              <span className="text-sm text-tertiary">
                 32% achieved
               </span>
               <span className="text-sm font-medium tabular-nums">$27,200</span>

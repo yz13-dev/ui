@@ -3,7 +3,7 @@
   "slug": "button",
   "kind": "component",
   "category": "buttons",
-  "description": "Clickable action trigger with default, outline, secondary, ghost, destructive and link styles across four sizes.",
+  "description": "Clickable action trigger with neutral, status and link styles across four sizes.",
   "tags": ["button", "action", "cta", "form"],
   "files": ["button.tsx"],
   "dependencies": ["@base-ui/react"],
@@ -14,7 +14,17 @@
       "prop": "variant",
       "label": "Variant",
       "type": "select",
-      "options": ["default", "outline", "secondary", "ghost", "destructive", "link"],
+      "options": [
+        "default",
+        "outline",
+        "secondary",
+        "ghost",
+        "error",
+        "success",
+        "warning",
+        "info",
+        "link"
+      ],
       "defaultValue": "default"
     },
     {
@@ -23,6 +33,12 @@
       "type": "select",
       "options": ["xs", "sm", "default", "lg"],
       "defaultValue": "default"
+    },
+    {
+      "prop": "filled",
+      "label": "Filled",
+      "type": "boolean",
+      "defaultValue": false
     },
     {
       "prop": "disabled",

@@ -17,7 +17,7 @@ export function Preview({ values }: { values: VariantValues }) {
         <CardDescription>A short supporting description.</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-body text-muted-foreground">Card content goes here.</p>
+        <p className="text-body text-tertiary">Card content goes here.</p>
       </CardContent>
     </Card>
   )

@@ -59,7 +59,7 @@ export function CatalogFilterableGrid({
       </div>
 
       {categories.length === 0 ? (
-        <p className="text-body text-muted-foreground">No matching items.</p>
+        <p className="text-body text-tertiary">No matching items.</p>
       ) : (
         <div className="flex flex-col gap-12">
           {categories.map(([category, categoryItems]) => (

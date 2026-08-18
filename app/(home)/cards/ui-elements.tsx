@@ -141,7 +141,7 @@ export function UIElements() {
                 </DropdownMenuGroup>
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
-                  <DropdownMenuItem variant="destructive">
+                  <DropdownMenuItem variant="error">
                     Delete Conversation
                   </DropdownMenuItem>
                 </DropdownMenuGroup>

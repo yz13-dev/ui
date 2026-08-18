@@ -56,7 +56,7 @@ function PricingThreeTier() {
               {tier.features.map((feature) => (
                 <li
                   key={feature}
-                  className="flex items-center gap-2 text-label text-muted-foreground"
+                  className="flex items-center gap-2 text-label text-tertiary"
                 >
                   <CheckIcon className="size-4 shrink-0" />
                   {feature}

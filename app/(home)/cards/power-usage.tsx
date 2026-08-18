@@ -42,7 +42,7 @@ export function PowerUsage() {
                 className="min-h-2 rounded-t bg-chart-2"
                 style={{ height: `${(item.usage / maxUsage) * 100}%` }}
               />
-              <span className="text-center text-xs text-muted-foreground">
+              <span className="text-center text-xs text-tertiary">
                 {item.hour}
               </span>
             </div>
@@ -51,13 +51,13 @@ export function PowerUsage() {
         <Separator />
         <div className="grid grid-cols-2 gap-4">
           <div className="flex flex-col gap-0.5">
-            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-tertiary">
               Currently Using
             </span>
             <span className="text-lg font-semibold tabular-nums">3.4 kW</span>
           </div>
           <div className="flex flex-col gap-0.5">
-            <span className="text-sm text-muted-foreground">Solar Gen</span>
+            <span className="text-sm text-tertiary">Solar Gen</span>
             <span className="text-lg font-semibold tabular-nums">+1.2 kW</span>
           </div>
         </div>

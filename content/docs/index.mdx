@@ -6,6 +6,21 @@ description: How this design system stays restrained, consistent, and evidence-l
 This registry is intentionally monochrome-first, typography-driven, and sparing with
 decoration. These are the conventions new components and pages should follow.
 
+## Markdown for AI tools
+
+The rendered documentation has machine-readable counterparts that can be passed to
+AI tools without scraping HTML:
+
+- [`/llms.mdx/docs/content.md`](/llms.mdx/docs/content.md) — this page as processed
+  Markdown, without frontmatter or MDX components
+- [`/llms.txt`](/llms.txt) — a compact index of all documentation pages and their
+  Markdown URLs
+- [`/llms-full.txt`](/llms-full.txt) — all documentation pages combined into one
+  text response
+
+Prefer the per-page Markdown URL when only one document is relevant; use
+`llms-full.txt` when the tool needs the whole design-system context.
+
 ## Typography roles
 
 Use semantic type roles for content, not arbitrary sizes. Each role is a `--text-*`
@@ -42,16 +57,71 @@ already covers it. Instead, pick the gap that matches the relationship:
 Every gap should have one clear owner. Don't stack a parent gap with competing margins
 on its children.
 
+## Control sizes
+
+Single-line controls use one shared density scale. The size name carries the same
+height across `Button`, `Input`, `InputGroup`, `SelectTrigger`, `NativeSelect`,
+`ComboboxInput`, and `InputOTP` slots.
+
+| Size | Height | Typical use |
+| --- | --- | --- |
+| `xs` | 24px | Dense toolbars, compact inline actions |
+| `sm` | 28px | Secondary controls and space-constrained forms |
+| `default` | 32px | Standard application UI |
+| `lg` | 36px | Prominent forms and primary actions |
+
+`Textarea` uses the same names as density presets rather than fixed heights. Its
+minimum heights are 48px, 56px, 64px, and 80px respectively. An `InputGroup` owns
+the size of the composed control: its input, textarea, addons, icons, and nested
+buttons inherit and adapt to the group size unless explicitly overridden.
+
+Keep controls that share a row or form section on the same size. A smaller control
+should communicate lower density, not compensate for a short label.
+
 ## Color
 
-Base UI tokens (`background`, `foreground`, `card`, `border`, `muted`, ...) are
-monochrome — plain OKLCH grays in both themes. Keep it that way: reach for the neutral
-scale by default.
+Color is a two-tier system in `globals.css`: primitive ramps, then semantic aliases
+built on top of them. Components only ever consume the semantic layer.
 
-The chroma accent palette (`--pink` through `--red`) exists for meaningful state or
-emphasis — not decoration. Don't recolor a component just because a color is available;
-use it when it communicates something the reader needs (a status, a selection, a
-result) and pair it with a non-color cue where possible.
+**Primitives** are 11-step OKLCH ramps (`50`→`950`) for `primary`, `success`,
+`warning`, `error`, and `info`. Components consume the compact semantic palette,
+whose roles select different steps from those ramps in light and dark themes. Keep
+raw OKLCH values in the primitive ramps; semantic tokens should reference them with
+`var(--*-*)` instead of duplicating color values.
+
+**Semantic aliases** flip per theme and are what components actually use, as normal
+Tailwind utilities:
+
+| Utility | Source | Use for |
+| --- | --- | --- |
+| `bg-canvas` / `bg-surface` / `bg-muted` | `primary` ramp | Page bg, card bg, popover bg, hover/selected surfaces |
+| `text-primary` / `text-secondary` | `primary` ramp | Body text hierarchy |
+| `text-link` | `primary` ramp | Inline links and link-styled buttons |
+| `bg-brand(-hover/-active)` / `text-brand-foreground` | `primary` ramp | Solid interactive surfaces — the default `Button`, `Badge` |
+| `bg-success` / `bg-warning` / `bg-error` / `bg-info` | status ramps | Solid status surfaces |
+| `text-success-foreground` / `text-warning-foreground` / `text-error-foreground` / `text-info-foreground` | status ramps | Contrast text on solid status surfaces |
+| `text-success` / `text-warning` / `text-error` / `text-info` + `bg-*/10` | status ramps | Status text and soft tinted surfaces |
+| `border-subtle` / `border-default` / `border-active` | `primary` ramp | Border hierarchy |
+
+Base UI (`canvas`, `surface`, `muted`, `border`, the text hierarchy) stays
+monochrome — reach for it by default. `accent` is the one deliberate chroma color in
+the system and exists for meaningful emphasis only, not decoration: don't reach for it
+just because it's available. `success` / `warning` / `error` / `info` are for genuine
+status communication (a result, a validation state) and should pair with a non-color
+cue (an icon, a label) where possible — a value isn't green just because it's
+favorable.
+
+Semantic `Button` and `Badge` variants are soft by default. Use `filled` when the
+status needs stronger emphasis while keeping the same meaning:
+
+```tsx
+<Button variant="info">Learn more</Button>
+<Button variant="info" filled>Review update</Button>
+<Badge variant="success" filled>Active</Badge>
+```
+
+`filled` only changes `success`, `warning`, `error`, and `info`. Neutral variants
+already define their own surface treatment and should not use it.
 
 ## Restraint checklist
 
@@ -61,6 +131,8 @@ Before shipping a component or page, check:
   prefer spacing, alignment, and type first.
 - Peer elements (equivalent stats, table columns, list rows) share the same type role,
   size, and alignment. Don't resize one because its content is longer.
+- Controls in the same row use the same named size; composed controls set it once on
+  their root rather than restating it on every child.
 - No color without meaning — a value isn't green just because it's favorable.
 - No decorative gradients on backgrounds or text. The gradient-border treatment
   (`gradient-border-plugin`, used by `Button` and `Card`) is this system's intentional

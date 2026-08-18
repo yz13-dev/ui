@@ -25,7 +25,7 @@ export function VariantControls({
     <div className="flex flex-wrap items-center gap-4 border-b p-4">
       {variants.map((variant) => (
         <div key={variant.prop} className="flex items-center gap-2">
-          <span className="text-label text-muted-foreground">{variant.label}</span>
+          <span className="text-label text-tertiary">{variant.label}</span>
           {variant.type === "boolean" ? (
             <Switch
               size="sm"
