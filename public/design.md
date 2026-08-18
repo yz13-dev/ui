@@ -42,7 +42,9 @@ reference a primitive step (`--primary-700`, `--success-400`, ...) directly from
 component.
 
 **Primitives** are 11-step OKLCH ramps (`50` → `950`), constant across both themes.
-The compact semantic palette declares the light and dark values used by components.
+The `primary` ramp is pinned to pure white at `50` and pure black at `950`; light
+`canvas` / `surface` and dark `canvas` use those endpoints directly. The compact
+semantic palette declares the light and dark values used by components.
 
 - `primary` — pure gray, zero chroma. The monochrome interactive color (buttons, links,
   focus rings).
