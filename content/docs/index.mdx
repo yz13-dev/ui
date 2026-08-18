@@ -84,9 +84,11 @@ Color is a two-tier system in `globals.css`: primitive ramps, then semantic alia
 built on top of them. Components only ever consume the semantic layer.
 
 **Primitives** are 11-step OKLCH ramps (`50`→`950`) for `primary`, `success`,
-`warning`, `error`, and `info`. Components consume the compact semantic palette,
-whose roles select different steps from those ramps in light and dark themes. Keep
-raw OKLCH values in the primitive ramps; semantic tokens should reference them with
+`warning`, `error`, and `info`. The achromatic `primary` ramp is pinned to pure white
+at `50` and pure black at `950`; light `canvas` / `surface` and dark `canvas` use those
+endpoints directly. Components consume the compact semantic palette, whose roles
+select different steps from those ramps in light and dark themes. Keep raw OKLCH
+values in the primitive ramps; semantic tokens should reference them with
 `var(--*-*)` instead of duplicating color values.
 
 **Semantic aliases** flip per theme and are what components actually use, as normal
