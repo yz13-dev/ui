@@ -1,4 +1,5 @@
 import { ActivityIcon, ArrowLeftRightIcon, BanknoteIcon, BellIcon, BookOpenIcon, CalendarIcon, ChartBarIcon, CreditCardIcon, FileIcon, GlobeIcon, HelpCircleIcon, MessageCircleIcon, PaintBucketIcon, PieChartIcon, ShieldIcon, TargetIcon, UserIcon, VaultIcon, WalletIcon } from "@/components/icons"
+import { cn } from "@/lib/utils"
 import { Card } from "@/registry/components/ui/card"
 import {
   Sidebar,
@@ -11,7 +12,6 @@ import {
   SidebarMenuItem,
   SidebarProvider,
 } from "@/registry/components/ui/sidebar"
-import { cn } from "@/lib/utils"
 import * as React from "react"
 
 function SidebarSection({
@@ -24,7 +24,7 @@ function SidebarSection({
   className?: string
 }) {
   return (
-    <Card className={cn("w-full overflow-hidden rounded-3xl py-0", className)}>
+    <Card className={cn("w-full overflow-hidden rounded-xl py-0", className)}>
       <SidebarProvider className="min-h-0">
         <Sidebar collapsible="none" className="w-full bg-transparent">
           <SidebarContent className="gap-0 overflow-hidden">

@@ -3,7 +3,7 @@
   "slug": "alert",
   "kind": "component",
   "category": "feedback",
-  "description": "Inline banner for surfacing a message alongside the page content, in default or destructive tone.",
+  "description": "Inline banner for surfacing neutral, error, success, warning or informational messages.",
   "tags": ["alert", "banner", "feedback", "message"],
   "files": ["alert.tsx"],
   "status": "stable",
@@ -13,7 +13,7 @@
       "prop": "variant",
       "label": "Variant",
       "type": "select",
-      "options": ["default", "destructive"],
+      "options": ["default", "error", "success", "warning", "info"],
       "defaultValue": "default"
     }
   ]

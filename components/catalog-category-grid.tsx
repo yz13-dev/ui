@@ -16,7 +16,7 @@ export function CatalogCategoryGrid({ items }: { items: CatalogListItem[] }) {
         <ViewToggle value={view} onChange={setView} />
       </div>
       {items.length === 0 ? (
-        <p className="text-body text-muted-foreground">No matching items.</p>
+        <p className="text-body text-tertiary">No matching items.</p>
       ) : (
         <ItemCollection items={items} view={view} />
       )}

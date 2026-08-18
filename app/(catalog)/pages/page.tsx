@@ -11,7 +11,7 @@ export default function PagesPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
         <h1 className="text-title font-medium">Pages</h1>
-        <p className="text-lede text-muted-foreground">
+        <p className="text-lede text-tertiary">
           Full pages composed from blocks.
         </p>
       </div>

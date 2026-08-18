@@ -21,10 +21,10 @@ export default function HomePage() {
         <div className="pb-10">
           <YZ13Icon className="w-40" />
         </div>
-        <h1 className="leading-tighter font-sans text-3xl font-medium tracking-tight text-balance text-foreground lg:leading-[1.1] xl:text-5xl xl:tracking-tighter max-w-4xl">
+        <h1 className="leading-tighter font-sans text-3xl font-medium tracking-tight text-balance text-primary lg:leading-[1.1] xl:text-5xl xl:tracking-tighter max-w-4xl">
           {title}
         </h1>
-        <p className='max-w-4xl text-base text-balance text-foreground sm:text-lg'>
+        <p className='max-w-4xl text-base text-balance text-primary sm:text-lg'>
           {description}
         </p>
       </div>

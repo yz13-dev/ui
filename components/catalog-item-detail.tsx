@@ -43,13 +43,13 @@ export async function CatalogItemDetail({ item }: { item: IndexedRegistryItem })
             {item.category}
           </Badge>
           {item.status && item.status !== "stable" ? (
-            <Badge variant={item.status === "deprecated" ? "destructive" : "outline"}>
+            <Badge variant={item.status === "deprecated" ? "error" : "outline"}>
               {item.status}
             </Badge>
           ) : null}
         </div>
         <h1 className="text-title font-medium">{item.name}</h1>
-        <p className="text-lede text-muted-foreground">{item.description}</p>
+        <p className="text-lede text-tertiary">{item.description}</p>
       </div>
 
       {item.tags.length > 0 ? (
@@ -66,7 +66,7 @@ export async function CatalogItemDetail({ item }: { item: IndexedRegistryItem })
         <h2 className="text-heading-16 font-medium">Files</h2>
         <ul className="flex flex-col gap-1">
           {item.files.map((file) => (
-            <li key={file} className="text-label text-muted-foreground">
+            <li key={file} className="text-label text-tertiary">
               {file}
             </li>
           ))}
@@ -107,7 +107,7 @@ export async function CatalogItemDetail({ item }: { item: IndexedRegistryItem })
                   {dependency ? (
                     <Link
                       href={`/${KIND_DIR[requiresKind]}/${dependency.category}/${dependency.slug}`}
-                      className="text-primary hover:underline"
+                      className="text-link hover:underline"
                     >
                       {dependency.name}
                     </Link>

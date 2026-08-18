@@ -13,7 +13,7 @@ export function Preview() {
       <CollapsibleTrigger className={buttonVariants({ variant: "outline" })}>
         Toggle details
       </CollapsibleTrigger>
-      <CollapsibleContent className="pt-2 text-label text-muted-foreground">
+      <CollapsibleContent className="pt-2 text-label text-tertiary">
         Additional content revealed when the trigger is pressed.
       </CollapsibleContent>
     </Collapsible>

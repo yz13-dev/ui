@@ -1,20 +1,17 @@
-"use client"
+"use client";
 
-import { SearchIcon } from "lucide-react"
+import { SearchIcon } from "lucide-react";
 
-import {
-  InputGroup,
-  InputGroupAddon,
-  InputGroupInput,
-} from "@/registry/components/ui/input-group"
+import type { VariantValues } from "@/components/variant-controls";
+import { InputGroup, InputGroupAddon, InputGroupInput } from "@/registry/components/ui/input-group";
 
-export function Preview() {
+export function Preview({ values }: { values: VariantValues }) {
   return (
-    <InputGroup className="w-full max-w-xs">
+    <InputGroup size={values.size as "xs" | "sm" | "default" | "lg"} className="w-full max-w-xs">
       <InputGroupAddon>
         <SearchIcon />
       </InputGroupAddon>
-      <InputGroupInput placeholder="Search components..." />
+      <InputGroupInput placeholder="Search components..." disabled={Boolean(values.disabled)} />
     </InputGroup>
-  )
+  );
 }

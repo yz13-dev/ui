@@ -28,23 +28,23 @@
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/golos-text-regular.woff2",
-          "target": "lib/fonts/golos-text-regular.woff2"
+          "path": "registry/lib/fonts/onest-regular.woff2",
+          "target": "lib/fonts/onest-regular.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/golos-text-500.woff2",
-          "target": "lib/fonts/golos-text-500.woff2"
+          "path": "registry/lib/fonts/onest-500.woff2",
+          "target": "lib/fonts/onest-500.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/golos-text-600.woff2",
-          "target": "lib/fonts/golos-text-600.woff2"
+          "path": "registry/lib/fonts/onest-600.woff2",
+          "target": "lib/fonts/onest-600.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/golos-text-700.woff2",
-          "target": "lib/fonts/golos-text-700.woff2"
+          "path": "registry/lib/fonts/onest-700.woff2",
+          "target": "lib/fonts/onest-700.woff2"
         },
         {
           "type": "registry:file",
@@ -58,33 +58,23 @@
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-regular.woff2",
-          "target": "lib/fonts/playfair-display-regular.woff2"
+          "path": "registry/lib/fonts/lora-regular.woff2",
+          "target": "lib/fonts/lora-regular.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-italic.woff2",
-          "target": "lib/fonts/playfair-display-italic.woff2"
+          "path": "registry/lib/fonts/lora-italic.woff2",
+          "target": "lib/fonts/lora-italic.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-500.woff2",
-          "target": "lib/fonts/playfair-display-500.woff2"
+          "path": "registry/lib/fonts/lora-700.woff2",
+          "target": "lib/fonts/lora-700.woff2"
         },
         {
           "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-500-italic.woff2",
-          "target": "lib/fonts/playfair-display-500-italic.woff2"
-        },
-        {
-          "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-600.woff2",
-          "target": "lib/fonts/playfair-display-600.woff2"
-        },
-        {
-          "type": "registry:file",
-          "path": "registry/lib/fonts/playfair-display-600-italic.woff2",
-          "target": "lib/fonts/playfair-display-600-italic.woff2"
+          "path": "registry/lib/fonts/lora-700-italic.woff2",
+          "target": "lib/fonts/lora-700-italic.woff2"
         },
         {
           "type": "registry:file",

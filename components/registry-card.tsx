@@ -24,7 +24,7 @@ export function RegistryCard({ item }: { item: CatalogListItem }) {
           <CardTitle>{item.name}</CardTitle>
           {item.status && item.status !== "stable" ? (
             <CardAction>
-              <Badge variant={item.status === "deprecated" ? "destructive" : "outline"}>
+              <Badge variant={item.status === "deprecated" ? "error" : "outline"}>
                 {item.status}
               </Badge>
             </CardAction>

@@ -10,7 +10,14 @@ import {
 export function Preview({ values }: { values: VariantValues }) {
   return (
     <Alert
-      variant={values.variant as "default" | "destructive"}
+      variant={
+        values.variant as
+          | "default"
+          | "error"
+          | "success"
+          | "warning"
+          | "info"
+      }
       className="w-full max-w-sm"
     >
       <AlertTitle>Heads up</AlertTitle>

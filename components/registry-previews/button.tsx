@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import type { VariantValues } from "@/components/variant-controls"
-import { Button } from "@/registry/components/ui/button"
+import type { VariantValues } from "@/components/variant-controls";
+import { Button } from "@/registry/components/ui/button";
 
 export function Preview({ values }: { values: VariantValues }) {
   return (
@@ -12,13 +12,17 @@ export function Preview({ values }: { values: VariantValues }) {
           | "outline"
           | "secondary"
           | "ghost"
-          | "destructive"
+          | "error"
+          | "success"
+          | "warning"
+          | "info"
           | "link"
       }
       size={values.size as "xs" | "sm" | "default" | "lg"}
+      filled={Boolean(values.filled)}
       disabled={Boolean(values.disabled)}
     >
       Button
     </Button>
-  )
+  );
 }

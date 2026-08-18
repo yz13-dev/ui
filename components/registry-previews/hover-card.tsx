@@ -14,7 +14,7 @@ export function Preview() {
       </HoverCardTrigger>
       <HoverCardContent>
         <p className="text-label font-medium">YZ13</p>
-        <p className="text-caption text-muted-foreground">
+        <p className="text-caption text-tertiary">
           A monochrome, typography-driven component registry.
         </p>
       </HoverCardContent>

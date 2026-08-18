@@ -8,7 +8,7 @@ function HeroCentered() {
       <h1 className="max-w-2xl text-display font-medium text-balance">
         Build your product's design system faster
       </h1>
-      <p className="max-w-lg text-lede text-muted-foreground text-balance">
+      <p className="max-w-lg text-lede text-tertiary text-balance">
         A monochrome, typography-driven component registry you can install with a single
         command and make your own.
       </p>

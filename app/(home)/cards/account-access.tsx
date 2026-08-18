@@ -45,7 +45,7 @@ export function AccountAccess() {
               </FieldLabel>
               <a
                 href="#"
-                className="text-xs font-medium tracking-wider text-muted-foreground uppercase hover:text-foreground"
+                className="text-xs font-medium tracking-wider text-tertiary uppercase hover:text-primary"
               >
                 Forgot?
               </a>

@@ -27,7 +27,7 @@ export default async function PreviewPage(
 
   return (
     <>
-      <div id={PREVIEW_ROOT_ID} className="min-h-screen bg-background text-foreground">
+      <div id={PREVIEW_ROOT_ID} className="min-h-screen bg-canvas text-primary">
         <Preview />
       </div>
       <PreviewHeightReporter />

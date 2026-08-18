@@ -42,7 +42,7 @@ export function ContributionHistory() {
                 className="min-h-2 rounded-t-md bg-chart-2"
                 style={{ height: `${(item.amount / maxAmount) * 100}%` }}
               />
-              <span className="text-center text-xs text-muted-foreground">
+              <span className="text-center text-xs text-tertiary">
                 {item.month}
               </span>
             </div>
@@ -53,13 +53,13 @@ export function ContributionHistory() {
         <div className="grid w-full grid-cols-1 gap-3 xl:grid-cols-2">
           <Item variant="muted" className="flex-col items-stretch">
             <ItemContent className="gap-1">
-              <ItemDescription className="text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              <ItemDescription className="text-xs font-medium tracking-wider text-tertiary uppercase">
                 Upcoming
               </ItemDescription>
               <span className="cn-font-heading text-base font-semibold">
                 May 2024
               </span>
-              <span className="text-sm text-muted-foreground">Scheduled</span>
+              <span className="text-sm text-tertiary">Scheduled</span>
             </ItemContent>
           </Item>
           <Item
@@ -67,13 +67,13 @@ export function ContributionHistory() {
             className="hidden flex-col items-stretch xl:flex"
           >
             <ItemContent className="gap-1">
-              <ItemDescription className="text-xs font-medium tracking-wider text-muted-foreground uppercase">
+              <ItemDescription className="text-xs font-medium tracking-wider text-tertiary uppercase">
                 Savings Plan
               </ItemDescription>
               <span className="cn-font-heading text-base font-semibold">
                 Accelerated
               </span>
-              <span className="text-sm text-muted-foreground">Recurring</span>
+              <span className="text-sm text-tertiary">Recurring</span>
             </ItemContent>
           </Item>
         </div>

@@ -9,6 +9,13 @@
   "status": "stable",
   "createdAt": "2026-08-15",
   "variants": [
+    {
+      "prop": "size",
+      "label": "Size",
+      "type": "select",
+      "options": ["xs", "sm", "default", "lg"],
+      "defaultValue": "default"
+    },
     { "prop": "disabled", "label": "Disabled", "type": "boolean", "defaultValue": false }
   ]
 }

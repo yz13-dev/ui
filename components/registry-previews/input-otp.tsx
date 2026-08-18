@@ -1,15 +1,20 @@
-"use client"
+"use client";
 
+import type { VariantValues } from "@/components/variant-controls";
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/registry/components/ui/input-otp"
+} from "@/registry/components/ui/input-otp";
 
-export function Preview() {
+export function Preview({ values }: { values: VariantValues }) {
   return (
-    <InputOTP maxLength={6}>
+    <InputOTP
+      maxLength={6}
+      size={values.size as "xs" | "sm" | "default" | "lg"}
+      disabled={Boolean(values.disabled)}
+    >
       <InputOTPGroup>
         <InputOTPSlot index={0} />
         <InputOTPSlot index={1} />
@@ -22,5 +27,5 @@ export function Preview() {
         <InputOTPSlot index={5} />
       </InputOTPGroup>
     </InputOTP>
-  )
+  );
 }

@@ -13,7 +13,7 @@ function NavbarSimple() {
             <a
               key={link}
               href="#"
-              className="text-label text-muted-foreground hover:text-foreground"
+              className="text-label text-tertiary hover:text-primary"
             >
               {link}
             </a>
