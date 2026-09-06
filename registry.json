@@ -941,6 +941,23 @@
           "target": "components/ui/tooltip.tsx"
         }
       ]
+    },
+    {
+      "name": "update-ui-kit",
+      "type": "registry:file",
+      "description": "Claude Code (and other agent-tool) skill that re-pulls installed components from this registry, overwriting local copies with the upstream version.",
+      "files": [
+        {
+          "type": "registry:file",
+          "path": "registry/skills/update-ui-kit/SKILL.md",
+          "target": ".agents/skills/update-ui-kit/SKILL.md"
+        },
+        {
+          "type": "registry:file",
+          "path": "registry/skills/update-ui-kit/CLAUDE_POINTER.md",
+          "target": ".claude/skills/update-ui-kit/SKILL.md"
+        }
+      ]
     }
   ]
 }
