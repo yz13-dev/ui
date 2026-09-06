@@ -66,16 +66,16 @@
   --color-disabled: var(--color-text-secondary);
   --color-link: var(--color-text-link);
   --color-success: var(--color-bg-success);
-  --color-success-subtle: var(--color-bg-success);
+  --color-success-subtle: var(--color-bg-success-subtle);
   --color-success-foreground: var(--color-text-on-success);
   --color-warning: var(--color-bg-warning);
-  --color-warning-subtle: var(--color-bg-warning);
+  --color-warning-subtle: var(--color-bg-warning-subtle);
   --color-warning-foreground: var(--color-text-on-warning);
   --color-error: var(--color-bg-error);
-  --color-error-subtle: var(--color-bg-error);
+  --color-error-subtle: var(--color-bg-error-subtle);
   --color-error-foreground: var(--color-text-on-error);
   --color-info: var(--color-bg-info);
-  --color-info-subtle: var(--color-text-info);
+  --color-info-subtle: var(--color-bg-info-subtle);
   --color-info-foreground: var(--color-text-on-info);
   --color-border: var(--color-border-default);
   --color-subtle: var(--color-border-subtle);
@@ -188,6 +188,10 @@
   --color-bg-warning: var(--warning-800);
   --color-bg-error: var(--error-800);
   --color-bg-info: var(--info-800);
+  --color-bg-success-subtle: var(--success-100);
+  --color-bg-warning-subtle: var(--warning-100);
+  --color-bg-error-subtle: var(--error-100);
+  --color-bg-info-subtle: var(--info-100);
   --color-text-primary: var(--primary-950);
   --color-text-secondary: var(--primary-700);
   --color-text-link: var(--primary-800);
@@ -225,6 +229,10 @@
   --color-bg-warning: var(--warning-300);
   --color-bg-error: var(--error-300);
   --color-bg-info: var(--info-300);
+  --color-bg-success-subtle: var(--success-900);
+  --color-bg-warning-subtle: var(--warning-900);
+  --color-bg-error-subtle: var(--error-900);
+  --color-bg-info-subtle: var(--info-900);
   --color-text-primary: var(--primary-50);
   --color-text-secondary: var(--primary-300);
   --color-text-link: var(--primary-300);
@@ -263,7 +271,6 @@
     font-stretch: normal;
     font-variation-settings: "GRAD" 0;
     font-optical-sizing: auto;
-    text-box: trim-both cap alphabetic;
   }
 
   body {

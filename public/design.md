@@ -128,7 +128,7 @@ Before shipping a component or page, check:
   size, and alignment. Don't resize one because its content is longer.
 - No color without meaning.
 - No decorative gradients on backgrounds or text. The gradient-border treatment
-  (`gradient-border-plugin`, used by `Button` and `Card`) is this system's intentional
+  (`gradient-border-plugin`, used by `Button`) is this system's intentional
   signature surface treatment, not decoration — it isn't extended to new uses without
   reason.
 - Motion explains a state change or confirms an action; it doesn't run by default.

@@ -2,7 +2,7 @@
 
 ## Design system
 
-Full principles: `content/docs/design-principles.mdx` (also served as a docs page). Read it before styling any new or edited component. Summary of the rules that apply when adding components:
+Full principles: `content/docs/index.mdx` (also served as a docs page, and mirrored for AI tools at `public/design.md`). Read it before styling any new or edited component. Summary of the rules that apply when adding components:
 
 **Typography** — use the semantic `text-*` role tokens from `registry/globals.css` (`@theme`), not raw Tailwind sizes, for anything that plays a content role:
 
@@ -20,9 +20,9 @@ When a role token's line-height already fits (all of them do — `--text-*--line
 
 **Spacing** — no separate spacing token scale; use Tailwind's default multiplier per the rhythm in the principles doc (`gap-1`–`gap-2` within a group, `gap-3`–`gap-4` inside a component, `gap-6`–`gap-8` between sections, `gap-12`–`gap-16` for major breaks).
 
-**Color** — base UI stays monochrome (neutral OKLCH tokens). The chroma accent palette (`--pink` … `--red`) is for meaningful state/emphasis only, never decoration.
+**Color** — base UI stays monochrome (neutral OKLCH tokens). The chroma status ramps (`success`/`warning`/`error`/`info`) are for meaningful state/emphasis only, never decoration; `accent` aliases `success` and is the one deliberate chroma color outside status communication.
 
-**Restraint** — no cards nested in cards, no color without meaning, peer elements (equivalent stats/columns/rows) share the same type role and alignment. The gradient-border treatment (`gradient-border-plugin`) is this system's intentional signature surface, not a "decorative gradient" — keep it scoped to where it's already used (`Button`, `Card`), don't extend it reflexively to new components.
+**Restraint** — no cards nested in cards, no color without meaning, peer elements (equivalent stats/columns/rows) share the same type role and alignment. The gradient-border treatment (`gradient-border-plugin`) is this system's intentional signature surface, not a "decorative gradient" — keep it scoped to where it's already used (`Button`'s default variant), don't extend it reflexively to new components.
 
 ## Registry structure
 
