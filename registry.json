@@ -145,9 +145,6 @@
     {
       "name": "card",
       "type": "registry:block",
-      "dependencies": [
-        "gradient-border-plugin"
-      ],
       "files": [
         {
           "type": "registry:component",
